@@ -10,8 +10,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -103,6 +107,53 @@ fun ResponsiveTable(
     }
 }
 
+/**
+ * Formats raw question text from JSON into PDF-like format with:
+ * - Proper line spacing and paragraphs
+ * - Bullet points (•) for lists
+ * - Indentation for sub-items (using spaces)
+ */
+private fun formatQuestionText(rawText: String): AnnotatedString {
+    return buildAnnotatedString {
+        val lines = rawText.split("\n")
+        
+        lines.forEachIndexed { index, line ->
+            val trimmedLine = line.trim()
+            
+            when {
+                // Empty line - add spacing
+                trimmedLine.isEmpty() && index > 0 -> {
+                    append("\n")
+                }
+                
+                // Bullet point pattern: "• text" or "○ text"
+                trimmedLine.startsWith("•") || trimmedLine.startsWith("○") -> {
+                    append("\n")
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.Medium)) {
+                        append("• ")
+                    }
+                    append(trimmedLine.removePrefix("•").removePrefix("○").trim())
+                }
+                
+                // Sub-item pattern: starts with "o " (lowercase o)
+                trimmedLine.startsWith("o ") -> {
+                    append("\n  ") // Indent with spaces
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.Normal)) {
+                        append("○ ")
+                    }
+                    append(trimmedLine.removePrefix("o ").trim())
+                }
+                
+                // Regular line
+                else -> {
+                    if (index > 0) append("\n")
+                    append(trimmedLine)
+                }
+            }
+        }
+    }
+}
+
 @Composable
 fun QuestionWithTables(
     text: String,
@@ -110,45 +161,32 @@ fun QuestionWithTables(
 ) {
     val parsedContent = TableParser.parseContent(text)
     
-    // Smart formatting for PDF-like structure
-    fun formatForReadability(input: String): String {
-        return input
-            // Add line break after colon followed by uppercase letter or bullet-like pattern
-            .replace(Regex(":\\s+([A-ZŞĞÜÖÇI•○◦▪▫-])"), ":\n$1")
-            // Add line break after question mark or period when followed by uppercase
-            .replace(Regex("([.?])\\s+([A-ZŞĞÜÖÇI])(?![a-zşğüöçı])"), "$1\n$2")
-            // Preserve enumerated lists (a), b), c), etc.) with proper spacing
-            .replace(Regex("\\)\\s+([a-z]\\))"), ")\n$1")
-            .trim()
-    }
-    
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         if (parsedContent.beforeTable.isNotEmpty()) {
-            // No tables, display as normal text with smart formatting
+            // No tables - format and display text
             Text(
-                text = formatForReadability(parsedContent.beforeTable),
+                text = formatQuestionText(parsedContent.beforeTable),
                 style = MaterialTheme.typography.bodyMedium,
-                lineHeight = 22.sp
+                lineHeight = 24.sp
             )
         } else {
-            // Has tables, display text segments and tables
+            // Has tables - display formatted text segments and tables
             parsedContent.textSegments.forEachIndexed { index, textSegment ->
                 if (textSegment.isNotEmpty()) {
                     Text(
-                        text = formatForReadability(textSegment),
+                        text = formatQuestionText(textSegment),
                         style = MaterialTheme.typography.bodyMedium,
-                        lineHeight = 22.sp
+                        lineHeight = 24.sp
                     )
                 }
                 
                 // Display table after this text segment (if exists)
                 if (index < parsedContent.tables.size) {
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
                     ResponsiveTable(tableData = parsedContent.tables[index])
-                    Spacer(modifier = Modifier.height(12.dp))
                 }
             }
         }
