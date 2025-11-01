@@ -110,50 +110,43 @@ fun QuestionWithTables(
 ) {
     val parsedContent = TableParser.parseContent(text)
     
-    // Format text to add line breaks for better readability
-    fun formatText(input: String): String {
+    // Format text with proper spacing for readability
+    fun formatQuestionText(input: String): String {
         return input
-            // Add line break only after sentence endings followed by numbered lists
-            .replace(Regex("([.!?])\\s+(\\d+\\.)")) { match ->
-                val punctuation = match.groupValues[1]
-                val number = match.groupValues[2]
-                "$punctuation\n\n$number"
-            }
-            // Add line break after long sentences ending with period
-            .replace(Regex("([.])\\s+([A-ZÇĞIÖŞÜ][a-zçğıöşü]{3,})")) { match ->
-                val period = match.groupValues[1]
-                val word = match.groupValues[2]
-                "$period\n\n$word"
-            }
+            // Split into sentences and add spacing for better readability
+            .replace(". ", ".\n")
+            .replace("? ", "?\n")
+            .replace(": ", ":\n")
+            .trim()
     }
     
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         if (parsedContent.beforeTable.isNotEmpty()) {
-            // No tables, display as normal text with formatting
+            // No tables, display as normal text
             Text(
-                text = formatText(parsedContent.beforeTable),
+                text = formatQuestionText(parsedContent.beforeTable),
                 style = MaterialTheme.typography.bodyMedium,
-                lineHeight = 24.sp
+                lineHeight = 20.sp
             )
         } else {
             // Has tables, display text segments and tables
             parsedContent.textSegments.forEachIndexed { index, textSegment ->
                 if (textSegment.isNotEmpty()) {
                     Text(
-                        text = formatText(textSegment),
+                        text = formatQuestionText(textSegment),
                         style = MaterialTheme.typography.bodyMedium,
-                        lineHeight = 24.sp
+                        lineHeight = 20.sp
                     )
                 }
                 
                 // Display table after this text segment (if exists)
                 if (index < parsedContent.tables.size) {
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(12.dp))
                     ResponsiveTable(tableData = parsedContent.tables[index])
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(12.dp))
                 }
             }
         }

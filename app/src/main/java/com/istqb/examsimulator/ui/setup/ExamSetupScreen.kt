@@ -36,7 +36,7 @@ fun ExamSetupScreen(
     val scope = rememberCoroutineScope()
     
     // Setup mode on first load
-    LaunchedEffect(isPracticeMode) {
+    LaunchedEffect(Unit) {
         viewModel.setupForMode(isPracticeMode)
     }
     
