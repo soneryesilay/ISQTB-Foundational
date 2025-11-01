@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -146,6 +147,18 @@ fun ReviewQuestionItem(
                 text = reviewItem.question.text,
                 style = MaterialTheme.typography.bodyLarge
             )
+            
+            // Question Image
+            if (!reviewItem.question.image.isNullOrBlank()) {
+                Spacer(modifier = Modifier.height(8.dp))
+                AsyncImage(
+                    model = reviewItem.question.image.replace("asset://", "file:///android_asset/"),
+                    contentDescription = "Soru görseli",
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .heightIn(max = 300.dp)
+                )
+            }
 
             // User Answer
             Column {

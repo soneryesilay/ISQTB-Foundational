@@ -152,12 +152,16 @@ fun ExamScreen(
                         text = currentQuestion.text,
                         style = MaterialTheme.typography.bodyLarge
                     )
-                    currentQuestion.image?.let { imageUri ->
+                    
+                    // Display image if exists
+                    if (!currentQuestion.image.isNullOrBlank()) {
                         Spacer(modifier = Modifier.height(16.dp))
                         AsyncImage(
-                            model = imageUri,
-                            contentDescription = null,
-                            modifier = Modifier.fillMaxWidth()
+                            model = currentQuestion.image.replace("asset://", "file:///android_asset/"),
+                            contentDescription = "Soru görseli",
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(max = 300.dp)
                         )
                     }
                 }
