@@ -130,6 +130,11 @@ fun AppNavHost(
                     navController.navigate(Screen.Dashboard.route) {
                         popUpTo(Screen.Dashboard.route) { inclusive = true }
                     }
+                },
+                onRetryExam = {
+                    navController.navigate(Screen.ExamSetup.route) {
+                        popUpTo(Screen.Dashboard.route) { inclusive = false }
+                    }
                 }
             )
         }

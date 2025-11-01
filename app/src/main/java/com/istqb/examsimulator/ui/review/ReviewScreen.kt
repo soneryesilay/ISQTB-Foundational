@@ -1,6 +1,7 @@
 package com.istqb.examsimulator.ui.review
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import com.istqb.examsimulator.ui.components.FullScreenImageDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -77,6 +79,9 @@ fun ReviewQuestionItem(
     reviewItem: ReviewItem,
     modifier: Modifier = Modifier
 ) {
+    var showFullScreenImage by remember { mutableStateOf(false) }
+    var fullScreenImageUrl by remember { mutableStateOf<String?>(null) }
+
     Card(
         modifier = modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
@@ -150,16 +155,38 @@ fun ReviewQuestionItem(
                 text = reviewItem.question.text
             )
             
-            // Question Image
+            // Question Image (clickable for full screen)
             if (!reviewItem.question.image.isNullOrBlank()) {
                 Spacer(modifier = Modifier.height(8.dp))
-                AsyncImage(
-                    model = reviewItem.question.image.replace("asset://", "file:///android_asset/"),
-                    contentDescription = "Soru görseli",
+                Card(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .heightIn(max = 300.dp)
-                )
+                        .clickable {
+                            fullScreenImageUrl = reviewItem.question.image.replace("asset://", "file:///android_asset/")
+                            showFullScreenImage = true
+                        },
+                    elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+                ) {
+                    Column(
+                        modifier = Modifier.padding(8.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        AsyncImage(
+                            model = reviewItem.question.image.replace("asset://", "file:///android_asset/"),
+                            contentDescription = "Soru görseli - Tıklayın",
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(min = 200.dp, max = 400.dp),
+                            contentScale = androidx.compose.ui.layout.ContentScale.Fit
+                        )
+                        Text(
+                            text = "🔍 Büyütmek için tıklayın",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.padding(top = 8.dp)
+                        )
+                    }
+                }
             }
 
             // User Answer
@@ -220,5 +247,16 @@ fun ReviewQuestionItem(
             }
         }
     }
+
+    if (showFullScreenImage && fullScreenImageUrl != null) {
+        FullScreenImageDialog(
+            imageUrl = fullScreenImageUrl!!,
+            onDismiss = { 
+                showFullScreenImage = false
+                fullScreenImageUrl = null
+            }
+        )
+    }
 }
+
 

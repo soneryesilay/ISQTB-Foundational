@@ -35,6 +35,11 @@ fun ExamSetupScreen(
 
     val scope = rememberCoroutineScope()
     
+    // Setup mode on first load
+    LaunchedEffect(isPracticeMode) {
+        viewModel.setupForMode(isPracticeMode)
+    }
+    
     var totalQuestionsText by remember { mutableStateOf(TextFieldValue(totalQuestions.toString())) }
     var durationText by remember { mutableStateOf(TextFieldValue(durationMinutes.toString())) }
     var passPercentText by remember { mutableStateOf(TextFieldValue(passPercent.toString())) }
@@ -67,7 +72,7 @@ fun ExamSetupScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(if (isPracticeMode) "Pratik Mod Ayarları" else "Sınav Ayarları") },
+                title = { Text(if (isPracticeMode) "Deneme Sınavı" else "Sınava Başla") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(
@@ -157,54 +162,33 @@ fun ExamSetupScreen(
                 )
             }
 
-            // Shuffle Options
-            item {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text("Soruları Karıştır")
-                    Switch(
-                        checked = shuffleQuestions,
-                        onCheckedChange = { viewModel.setShuffleQuestions(it) }
-                    )
+            // Shuffle Options - Only for Practice Mode
+            if (isPracticeMode) {
+                item {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text("Soruları Karıştır")
+                        Switch(
+                            checked = shuffleQuestions,
+                            onCheckedChange = { viewModel.setShuffleQuestions(it) }
+                        )
+                    }
                 }
-            }
 
-            item {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text("Şıkları Karıştır")
-                    Switch(
-                        checked = shuffleOptions,
-                        onCheckedChange = { viewModel.setShuffleOptions(it) }
-                    )
-                }
-            }
-
-            // Seed
-            item {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    OutlinedTextField(
-                        value = seedText,
-                        onValueChange = {
-                            seedText = it
-                            it.text.toLongOrNull()?.let { num -> viewModel.setSeed(num) }
-                        },
-                        label = { Text("Tohum (Seed)") },
-                        modifier = Modifier.weight(1f),
-                        singleLine = true
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Button(onClick = { viewModel.generateSeed() }) {
-                        Text("Yenile")
+                item {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text("Şıkları Karıştır")
+                        Switch(
+                            checked = shuffleOptions,
+                            onCheckedChange = { viewModel.setShuffleOptions(it) }
+                        )
                     }
                 }
             }

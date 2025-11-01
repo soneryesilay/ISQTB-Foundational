@@ -24,6 +24,7 @@ import coil.compose.AsyncImage
 import com.istqb.examsimulator.data.model.Question
 import com.istqb.examsimulator.ui.exam.ExamViewModel
 import com.istqb.examsimulator.ui.components.QuestionWithTables
+import com.istqb.examsimulator.ui.components.FullScreenImageDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,6 +38,8 @@ fun ExamScreen(
     val examState = viewModel.examState.collectAsState().value
     var showFinishDialog by remember { mutableStateOf(false) }
     var showGridNavigator by remember { mutableStateOf(false) }
+    var showFullScreenImage by remember { mutableStateOf(false) }
+    var fullScreenImageUrl by remember { mutableStateOf<String?>(null) }
 
     LaunchedEffect(attemptId) {
         viewModel.loadExamData(attemptId)
@@ -153,16 +156,38 @@ fun ExamScreen(
                 Column(modifier = Modifier.padding(16.dp)) {
                     QuestionWithTables(text = currentQuestion.text)
                     
-                    // Display image if exists
+                    // Display image if exists (clickable for full screen)
                     if (!currentQuestion.image.isNullOrBlank()) {
                         Spacer(modifier = Modifier.height(16.dp))
-                        AsyncImage(
-                            model = currentQuestion.image.replace("asset://", "file:///android_asset/"),
-                            contentDescription = "Soru görseli",
+                        Card(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .heightIn(max = 300.dp)
-                        )
+                                .clickable {
+                                    fullScreenImageUrl = currentQuestion.image.replace("asset://", "file:///android_asset/")
+                                    showFullScreenImage = true
+                                },
+                            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(8.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                AsyncImage(
+                                    model = currentQuestion.image.replace("asset://", "file:///android_asset/"),
+                                    contentDescription = "Soru görseli - Tıklayın",
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .heightIn(min = 200.dp, max = 400.dp),
+                                    contentScale = androidx.compose.ui.layout.ContentScale.Fit
+                                )
+                                Text(
+                                    text = "🔍 Büyütmek için tıklayın",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.primary,
+                                    modifier = Modifier.padding(top = 8.dp)
+                                )
+                            }
+                        }
                     }
                 }
             }
@@ -240,6 +265,16 @@ fun ExamScreen(
                     showGridNavigator = false
                 },
                 onDismiss = { showGridNavigator = false }
+            )
+        }
+
+        if (showFullScreenImage && fullScreenImageUrl != null) {
+            FullScreenImageDialog(
+                imageUrl = fullScreenImageUrl!!,
+                onDismiss = { 
+                    showFullScreenImage = false
+                    fullScreenImageUrl = null
+                }
             )
         }
     }

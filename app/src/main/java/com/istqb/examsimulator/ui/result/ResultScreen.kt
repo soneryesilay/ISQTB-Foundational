@@ -18,6 +18,7 @@ fun ResultScreen(
     attemptId: String,
     onNavigateToReview: (String) -> Unit,
     onNavigateBack: () -> Unit,
+    onRetryExam: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     LaunchedEffect(attemptId) {
@@ -119,6 +120,20 @@ fun ResultScreen(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("Detaylı İnceleme")
+            }
+
+            if (!attempt.passed) {
+                Button(
+                    onClick = onRetryExam,
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.secondary
+                    )
+                ) {
+                    Icon(Icons.Default.Refresh, contentDescription = null)
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text("Tekrar Dene")
+                }
             }
 
             OutlinedButton(

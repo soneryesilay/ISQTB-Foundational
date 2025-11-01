@@ -24,7 +24,7 @@ fun ResponsiveTable(
         modifier = modifier
             .fillMaxWidth()
             .border(
-                width = 1.dp,
+                width = 2.dp,
                 color = MaterialTheme.colorScheme.outline,
                 shape = MaterialTheme.shapes.small
             ),
@@ -36,7 +36,7 @@ fun ResponsiveTable(
                 modifier = Modifier
                     .fillMaxWidth()
                     .border(
-                        width = 0.5.dp,
+                        width = 1.dp,
                         color = MaterialTheme.colorScheme.outline
                     )
             ) {
@@ -44,21 +44,22 @@ fun ResponsiveTable(
                     Box(
                         modifier = Modifier
                             .weight(1f)
-                            .padding(8.dp)
+                            .padding(10.dp)
                             .border(
                                 width = 0.5.dp,
                                 color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f)
                             )
-                            .padding(4.dp),
+                            .padding(6.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = header,
-                            style = MaterialTheme.typography.bodySmall.copy(
+                            style = MaterialTheme.typography.bodyMedium.copy(
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 12.sp
+                                fontSize = 13.sp
                             ),
-                            textAlign = TextAlign.Center
+                            textAlign = TextAlign.Center,
+                            lineHeight = 18.sp
                         )
                     }
                 }
@@ -78,20 +79,21 @@ fun ResponsiveTable(
                         Box(
                             modifier = Modifier
                                 .weight(1f)
-                                .padding(6.dp)
+                                .padding(8.dp)
                                 .border(
                                     width = 0.3.dp,
                                     color = MaterialTheme.colorScheme.outline.copy(alpha = 0.2f)
                                 )
-                                .padding(4.dp),
+                                .padding(6.dp),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
                                 text = cell,
                                 style = MaterialTheme.typography.bodySmall.copy(
-                                    fontSize = 11.sp
+                                    fontSize = 12.sp
                                 ),
-                                textAlign = TextAlign.Center
+                                textAlign = TextAlign.Center,
+                                lineHeight = 16.sp
                             )
                         }
                     }
@@ -108,23 +110,40 @@ fun QuestionWithTables(
 ) {
     val parsedContent = TableParser.parseContent(text)
     
+    // Format text to add line breaks for better readability
+    fun formatText(input: String): String {
+        return input
+            // Add line break after sentences ending with comma followed by number
+            .replace(Regex("([,;])\\s*(\\d+\\.)"), "$1\n\n$2")
+            // Add line break before numbered lists
+            .replace(Regex("([.!?])\\s+(\\d+\\.)"), "$1\n\n$2")
+            // Add line break after long sentences (more than 100 chars without break)
+            .replace(Regex("([.!?])\\s+([A-ZÇĞIÖŞÜ])")) { match ->
+                val before = match.groupValues[1]
+                val after = match.groupValues[2]
+                "$before\n\n$after"
+            }
+    }
+    
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         if (parsedContent.beforeTable.isNotEmpty()) {
-            // No tables, display as normal text
+            // No tables, display as normal text with formatting
             Text(
-                text = parsedContent.beforeTable,
-                style = MaterialTheme.typography.bodyMedium
+                text = formatText(parsedContent.beforeTable),
+                style = MaterialTheme.typography.bodyMedium,
+                lineHeight = 24.sp
             )
         } else {
             // Has tables, display text segments and tables
             parsedContent.textSegments.forEachIndexed { index, textSegment ->
                 if (textSegment.isNotEmpty()) {
                     Text(
-                        text = textSegment,
-                        style = MaterialTheme.typography.bodyMedium
+                        text = formatText(textSegment),
+                        style = MaterialTheme.typography.bodyMedium,
+                        lineHeight = 24.sp
                     )
                 }
                 

@@ -73,22 +73,17 @@ object TableParser {
                 .map { it.trim() }
                 .filter { it.isNotEmpty() }
             
-            // Find separator line after header (contains ├)
-            var separatorIndex = -1
-            for (i in headerIndex + 1 until lines.size) {
-                if (lines[i].startsWith("├")) {
-                    separatorIndex = i
-                    break
-                }
-            }
-            
-            // Parse data rows (between separator and bottom border)
+            // Parse all data rows (skip separators and borders)
             val rows = mutableListOf<List<String>>()
-            val startRow = if (separatorIndex != -1) separatorIndex + 1 else headerIndex + 1
             
-            for (i in startRow until lines.size - 1) {
+            for (i in headerIndex + 1 until lines.size) {
                 val line = lines[i]
-                if (line.startsWith("├") || line.startsWith("└")) continue
+                // Skip border and separator lines
+                if (line.startsWith("├") || 
+                    line.startsWith("└") || 
+                    line.startsWith("┌") ||
+                    line.startsWith("┬") ||
+                    line.startsWith("┴")) continue
                 
                 if (line.contains("│")) {
                     val cells = line
@@ -96,7 +91,8 @@ object TableParser {
                         .map { it.trim() }
                         .filter { it.isNotEmpty() }
                     
-                    if (cells.isNotEmpty()) {
+                    // Only add rows that have content and match column count
+                    if (cells.isNotEmpty() && cells.size == headerCells.size) {
                         rows.add(cells)
                     }
                 }

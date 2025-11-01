@@ -55,6 +55,21 @@ class ExamSetupViewModel(
         }
     }
 
+    fun setupForMode(isPracticeMode: Boolean) {
+        if (!isPracticeMode) {
+            // Sınava Başla: Karıştırma kapalı, süre var
+            _shuffleQuestions.value = false
+            _shuffleOptions.value = false
+            _seed.value = null
+            _durationMinutes.value = 60
+        } else {
+            // Deneme Sınavı: Karıştırma açık, süre yok
+            _shuffleQuestions.value = true
+            _shuffleOptions.value = true
+            _seed.value = Shuffler.generateSeed()
+        }
+    }
+
     fun loadQuestionSets() {
         viewModelScope.launch {
             questionRepository.getAllQuestionSets().collect { sets ->

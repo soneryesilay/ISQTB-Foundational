@@ -1,15 +1,22 @@
 package com.istqb.examsimulator.ui.dashboard
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Code
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.istqb.examsimulator.data.model.ExamAttempt
@@ -99,13 +106,13 @@ fun DashboardScreen(
                         onClick = onQuickExamClick,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("Hızlı Sınav")
+                        Text("Sınava Başla")
                     }
                     Button(
                         onClick = onPracticeModeClick,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("Pratik Mod")
+                        Text("Deneme Sınavı")
                     }
                     OutlinedButton(
                         onClick = onQuestionSetsClick,
@@ -129,6 +136,11 @@ fun DashboardScreen(
                 items(recentAttempts) { attempt ->
                     AttemptListItem(attempt)
                 }
+            }
+
+            // GitHub Footer
+            item {
+                GitHubFooter()
             }
         }
     }
@@ -257,6 +269,53 @@ fun AttemptListItem(attempt: ExamAttempt) {
                 )
             }
         }
+    }
+}
+
+@Composable
+fun GitHubFooter() {
+    val context = LocalContext.current
+    val githubUrl = "https://github.com/soneryesilay"
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Divider(modifier = Modifier.padding(bottom = 16.dp))
+        
+        Row(
+            modifier = Modifier
+                .clickable {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl))
+                    context.startActivity(intent)
+                }
+                .padding(8.dp),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Default.Code,
+                contentDescription = "GitHub",
+                tint = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.size(20.dp)
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(
+                text = "soneryesilay",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.primary,
+                textDecoration = TextDecoration.Underline
+            )
+        }
+        
+        Text(
+            text = "Made with ❤️",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(top = 8.dp)
+        )
     }
 }
 
