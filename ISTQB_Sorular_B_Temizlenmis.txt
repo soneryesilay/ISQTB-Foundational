@@ -1,0 +1,385 @@
+SORU 1
+Aşağıdakilerden hangisi testin neden gerekli olduğuna dair bir örnektir?
+a) Dinamik testler, test nesnelerinin kullanıcıların asla sağlayamayacağı şekillerde başarısız olmasına neden olarak kaliteyi artırır.
+b) Statik testler, yazılım geliştiriciler tarafından program kodlarındaki hataları dinamik testlerden daha erken tespit etmek için kullanılır.
+c) Statik analiz, müşterilere hiçbir çıktı sağlamayan sistem unsurlarının piyasaya sürülmeye uygun olduğuna dair kanıt sağlar.
+d) İncelemeler gereksinim spesifikasyonlarının kalitesini artırır ve elde edilen çalışma ürünlerinde daha az değişikliğe ihtiyaç duyulmasını sağlar.
+CEVAP: d
+
+SORU 2
+Kalite güvencesi (QA) ve/veya kalite kontrolü (QC) ile ilgili aşağıdaki ifadelerden hangisi doğrudur?
+a) Kalite güvencesi, testin bir parçası olarak gerçekleştirilir.
+b) Testler, kalite kontrolünün bir parçası olarak gerçekleştirilir.
+c) Test, kalite kontrolünün bir diğer adıdır.
+d) Testler, kalite güvencesinin bir parçası olarak gerçekleştirilir.
+CEVAP: b
+
+SORU 3
+"Test ilkeleri"nden biri, yazılımı %100 test etmenin imkansız olduğunu belirtir. Aşağıdakilerden hangisi bu ilkenin pratikte uygulanmasına bir örnektir?
+a) Test senaryolarının belirlenmiş her olası çıktıyı kapsayacak şekilde oluşturulması
+b) Tüm olası test girdisi varyasyonlarının dokümante edilmesi ve bunların önem sırasına göre önceliklendirilmesi
+c) İncelemeler ve diğer statik test yaklaşımları ile testlere mümkün olduğunca erken başlanması
+d) Test senaryoların oluşturulması için denklik paylarına ayırma ve sınır değer analizinin kullanılması
+CEVAP: d
+
+SORU 4
+Aşağıdakilerden hangi test aktivitesi, test verisi gereksinimleri, test koşulları, test ortamı gereksinimleri ve test senaryoları ile çalışmayı içerir?
+a) Test tasarımı
+b) Test koşumu
+c) Test analizi
+d) Test uyarlaması
+CEVAP: a
+
+SORU 5
+Aşağıdakilerden hangisinin belirli bir test nesnesi için testin nasıl gerçekleştirildiğini etkileme olasılığı EN YÜKSEKTİR?
+a) Organizasyonun pazarlama ekibinin ortalama deneyim seviyesi
+b) Kullanıcıların kendileri için yeni bir sistem geliştirildiğini bilmeleri
+c) Test ekibi üyelerinin kaç yıllık deneyime sahip olduğu
+d) Ticari bir müzik dinleme uygulaması için son kullanıcının organizasyon yapısı
+CEVAP: c
+
+SORU 6
+Aşağıdaki ifadelerden hangisi izlenebilirliğin önemine ilişkin DOĞRU bir örnektir?
+a) Azaltılan riskler ve başarılı test senaryoları arasındaki izlenebilirlik, kalan risk seviyesinin belirlenmesini sağlar.
+b) Kullanıcı gereksinimleri ve test uyarlama sonuçları arasındaki izlenebilirlik, projenin iş hedeflerine göre ilerlemesinin ölçülebilmesini sağlar.
+c) Test uzmanları ve başarısız test senaryoları arasındaki izlenebilirlik, test uzmanlarının beceri düzeyinin belirlenebilmesini sağlar.
+d) Belirlenen riskler ve yazılı test koşulları arasındaki izlenebilirlik, hangi risklerin test edilmeye değer olduğunun belirlenebilmesini sağlar.
+CEVAP: b
+
+SORU 7
+Aşağıdakilerden hangisi bir test uzmanının test yaparken genel becerileri kullanmasına EN UYGUN örnektir?
+a) Test uzmanının çeşitli bilgisayar oyunları hakkındaki geniş bilgisi sebebiyle oyunlarla ilgilenen geliştiricilerden biriyle iyi geçinmesi
+b) Test uzmanının eskiden pilot olması sebebiyle helikopter kontrol sistemi için kabul kriterlerini daha iyi anlayabilmesi
+c) Test uzmanının önceden programcı olarak çalışması sebebiyle bu alandaki becerilerinin yardımıyla iş analistleriyle daha iyi iletişim kurması
+d) Test uzmanının, keşif testi oturumuna başlamadan önce test senaryolarını metodik olarak oluştururken hata yapmamaya çok dikkat etmesi
+CEVAP: b
+
+SORU 8
+Aşağıdakilerden hangisi tüm ekip yaklaşımının avantajlarından biridir?
+a) Ekip üyelerinin herhangi bir zamanda herhangi bir rolü üstlenmesine olanak tanır.
+b) Tüm geliştirme projesini desteklemek için yalnızca tek bir ekibe ihtiyaç duyar.
+c) İş temsilcilerini geliştiricilerle aynı ekibe dahil eder.
+d) Tüm projeye fayda sağlayan bir ekip sinerjisi oluşturur.
+CEVAP: d
+
+SORU 9
+Yazılım Geliştirme Yaşam Döngüsü çeşitleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?
+a) Çevik yazılım geliştirme kullanılıyorsa, sistem testi otomasyonu regresyon testi ihtiyacının yerini alır.
+b) Sıralı bir yazılım geliştirme modeli kullanılıyorsa, dinamik testler genellikle yaşam döngüsünün ilerleyen aşamalarıyla sınırlandırılır.
+c) Yinelemeli bir yazılım geliştirme modeli kullanılıyorsa, bileşen testleri genellikle geliştiriciler tarafından manuel olarak gerçekleştirilir.
+d) Artımlı bir yazılım geliştirme modeli kullanılıyorsa, statik testler erken aşamalarda, dinamik testler ise sonraki aşamalarda yapılır.
+CEVAP: b
+
+SORU 10
+Aşağıdakilerden hangisi tüm Yazılım Geliştirme Yaşam Döngüsü modelleri için geçerli olan iyi bir test uygulamasıdır?
+a) Test uzmanları, çalışma ürünlerini bir sonraki geliştirme aşamasının bir parçası olarak gözden geçirmelidir.
+b) Test uzmanları, çalışma ürünlerini taslaklar hazır olur olmaz gözden geçirmelidir.
+c) Test uzmanları, çalışma ürünlerini test analizi ve tasarımına başlamadan önce gözden geçirmelidir.
+d) Test uzmanları çalışma ürünlerini yayınlandıktan hemen sonra gözden geçirmelidir.
+CEVAP: b
+
+SORU 11
+Aşağıdakilerden hangisi test öncelikli geliştirme yaklaşımına bir örnektir?
+a) Test Güdümlü Geliştirme
+b) Kapsama Güdümlü Geliştirme
+c) Kalite Güdümlü Geliştirme
+d) Özellik Güdümlü Geliştirme
+CEVAP: a
+
+SORU 12
+DevOps ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?
+a) Sürümleri hızlandırmak amacıyla, bileşen testlerini tamamlamaya gerek kalmadan geliştiricileri hızlı bir şekilde kod göndermeye teşvik etmek için sürekli entegrasyon kullanılır.
+b) Yazılımları daha sık güncellemek ve piyasaya sürmek için, regresyon tehlikesini azaltmak için birçok otomatize regresyon testi gereklidir.
+c) Test uzmanları, geliştiricilere ve operatörlere eşit davranmak amacıyla, shift-right yaklaşımını kullanarak, operatörler tarafından gerçekleştirilen sürüm testine daha fazla efor harcayacaktır.
+d) Test uzmanları, geliştiriciler ve operatörler arasında daha fazla sinerji yaratmak için testler, manuel test olmadan tamamen otomatize hale getirilmelidir.
+CEVAP: b
+
+SORU 13
+Aşağıdakilerden hangisinin sistem testinin bir parçası olarak gerçekleştirilme olasılığı EN YÜKSEKTİR?
+a) Bağımsız bir test ekibi tarafından gerçekleştirilen bir kredi yönetim sisteminin güvenlik testi
+b) Bir döviz bozdurma sisteminin harici bir bankacılık sistemi ile arayüzünün test edilmesi
+c) Eğitim yazılımı geliştiricileri tarafından bir uzaktan eğitim sisteminin beta testi
+d) Bir insan kaynakları sisteminin kullanıcı arayüzü ve veri tabanı arasındaki etkileşimlerin test edilmesi
+CEVAP: a
+
+SORU 14
+Aşağıdaki ifadelerden hangisi DOĞRUDUR?
+a) Regresyon testlerinin sayısı proje ilerledikçe artarken, onaylama testlerinin sayısı proje ilerledikçe azalır.
+b) Regresyon testleri test nesnesi sabitlendiğinde oluşturulur ve çalıştırılır, onaylama testleri ise test nesnesi geliştirildiğinde çalıştırılır.
+c) Regresyon testi, operasyonel ortamın değişmeden kaldığını kontrol etmekle ilgiliyken, onaylama testi test nesnesindeki değişiklikleri test etmekle ilgilidir.
+d) Regresyon testi değişmeyen koddaki olumsuz etkilerle ilgilenirken, onaylama testi değişen kodun test edilmesiyle ilgilenir.
+CEVAP: d
+
+SORU 15
+Aşağıdakilerden hangisi statik test ile bulunabilirken dinamik test ile bulunamayan bir hataya örnektir?
+a) Kullanıcı arayüzünde oluşan kullanılabilirlik eksikliği
+b) Kendisine ulaşan bir yol olmayan kod
+c) Beklenen kullanıcıların çoğu için zayıf yanıt süreleri
+d) Kodda uygulanmayan gerekli özellikler
+CEVAP: b
+
+SORU 16
+Aşağıdakilerden hangisi paydaşlardan erken ve sık sık geri bildirim almanın faydalarından biridir?
+a) Yöneticiler hangi geliştiricilerin daha az üretken olduğunun farkına varır.
+b) Proje yöneticilerinin paydaş etkileşimlerine öncelik vermelerini sağlar.
+c) Potansiyel kalite sorunlarının erken iletişimini kolaylaştırır.
+d) Son kullanıcılar çalışma ürününün tesliminin neden geciktiğini daha iyi anlar.
+CEVAP: c
+
+SORU 17
+Aşağıdaki verilen görev tanımları, hangi gözden geçirme faaliyetleriyle EN İYİ eşleşir?
+1. Değerlendirilecek kalite özellikleri ve çıkış kriterleri seçilir.
+2. Herkesin çalışma ürünlerine erişimi vardır.
+3. Çalışma ürünlerinde anormallikler tespit edilir.
+4. Anomaliler tartışılır.
+A. Bireysel gözden geçirme
+B. Gözden geçirmeyi başlatma
+C. Planlama
+D. İletişim ve analiz
+a) 1B, 2C, 3D, 4A
+b) 1B, 2D, 3C, 4A
+c) 1C, 2A, 3B, 4D
+d) 1C, 2B, 3A, 4D
+CEVAP: d
+
+SORU 18
+Aşağıda verilen görev tanımları, hangi rol ve sorumluluklarla EN İYİ şekilde eşleşir?
+1. Katip (Scribe)
+2. Gözden geçirme lideri
+3. Kolaylaştırıcı
+4. Yönetici
+A. Gözden geçirme toplantılarının etkin bir şekilde yürütülmesini ve güvenli bir gözden geçirme ortamının oluşturulmasını sağlar.
+B. Gözden geçirme toplantısı sırasında bulunan kararlar ve yeni anomaliler gibi inceleme bilgilerini kaydeder.
+C. Neyin gözden geçirileceğine karar verir ve gözden geçirme için personel ve zaman gibi kaynakları sağlar.
+D. Gözden geçirmenin ne zaman ve nerede yapılacağını organize etmek gibi gözden geçirmenin genel sorumluluğunu üstlenir.
+a) 1A, 2B, 3D, 4C
+b) 1A, 2C, 3B, 4D
+c) 1B, 2D, 3A, 4C
+d) 1B, 2D, 3C, 4A
+CEVAP: c
+
+SORU 19
+Aşağıdaki ifadelerden hangisi karar tablosu testi ile dal testi arasındaki farkı EN İYİ şekilde açıklar?
+a) Karar tablosu testinde, test senaryoları koddaki karar ifadelerinden türetilir. Dal testinde, test senaryoları test nesnesinin kontrol akışı bilgisinden türetilir.
+b) Karar tablosu testinde, test senaryoları iş mantığını tanımlayan spesifikasyondan türetilir. Dal testinde, test senaryoları kaynak koddaki olası hataların öngörülmesine dayanır.
+c) Karar tablosu testinde, test senaryoları test nesnesinin kontrol akışı bilgisinden türetilir. Dal testinde, test senaryoları iş mantığını tanımlayan spesifikasyondan türetilir.
+d) Karar tablosu testinde, test senaryoları yazılımın nasıl uygulandığından bağımsızdır. Dal testinde, test senaryoları ancak kodun tasarımından veya uygulanmasından sonra oluşturulabilir.
+CEVAP: d
+
+SORU 20
+TestWash oto yıkama zincirinin müşterileri, o ana kadar satın aldıkları yıkama sayısının kaydedildiği kartlara sahiptir. Başlangıç değeri 0'dır. Oto yıkamaya girdikten sonra sistem karttaki sayıyı bir artırır. Bu değer mevcut yıkama sayısını temsil eder. Bu sayıya göre sistem müşterinin ne kadar indirim hakkı olduğuna karar verir. Her onuncu yıkamada sistem %10 indirim yapar ve her yirminci yıkamada sistem %40 daha indirim yapar (yani toplamda %50 indirim). Aşağıdaki veri giriş setlerinden hangisi (mevcut yıkama sayıları) en yüksek denklik payı kapsamına ulaşır?
+a) 19, 20, 30
+b) 11, 12, 20
+c) 1, 10, 50
+d) 10, 29, 30, 31
+CEVAP: a
+
+SORU 21
+Girdi olarak verilen parolanın uzunluğunu doğrulayan bir formu test ediyorsunuz. Form, doğru uzunluktaki bir parolayı kabul eder ve çok kısa veya çok uzun bir parolayı reddeder. Parola uzunluğu 6 ila 12 karakter arasında ise parola doğrudur. Aksi takdirde, yanlış olarak kabul edilir. İlk başta form boştur (parola uzunluğu = 0). "Parola uzunluğu" değişkenine sınır değer analizi uyguladığınızı varsayın. Test senaryoları setiniz %100 2-değerli sınır değer kapsamına ulaşır. Ekip, bu bileşenin yüksek riski nedeniyle, %100 3-değerli sınır değer kapsamı sağlamak için test senaryolarının eklenmesi gerektiğine karar verir. Bunu başarmak için aşağıdaki hangi ek parola uzunlukları test edilmelidir?
+a) 4, 5, 13, 14
+b) 7, 11
+c) 1, 5, 13
+d) 1, 4, 7, 11, 14
+CEVAP: d
+
+SORU 22
+Aşağıdaki karar tablosu ateroskleroz riskini belirlemeye yönelik kuralları içermektedir.
+Koşullar:
+Kural 1: Kolesterol ≤124 mg/dl, Kan basıncı ≤140 mm Hg
+Kural 2: Kolesterol ≤124 mg/dl, Kan basıncı >140 mm Hg
+Kural 3: Kolesterol 125–200 mg/dl, Kan basıncı ≤140 mm Hg
+Kural 4: Kolesterol 125–200 mg/dl, Kan basıncı >140 mm Hg
+Kural 5: Kolesterol ≥201 mg/dl
+Aksiyonlar:
+Risk seviyesi: çok düşük, düşük, orta, yüksek
+Test senaryolarını aşağıdaki test girdi verileri ile tasarladınız:
+TC1: Kolesterol = 125 mg/dl, Kan basıncı = 141 mm Hg
+TC2: Kolesterol = 200 mg/dl, Kan basıncı = 201 mm Hg
+TC3: Kolesterol = 124 mg/dl, Kan basıncı = 201 mm Hg
+TC4: Kolesterol = 109 mg/dl, Kan basıncı = 200 mm Hg
+TC5: Kolesterol = 201 mg/dl, Kan basıncı = 140 mm Hg
+Bu test senaryoları tarafından elde edilen karar tablosu kapsamı nedir?
+a) 40%
+b) 60%
+c) 80%
+d) 100%
+CEVAP: b
+
+SORU 23
+Bir depolama sistemi en fazla üç eleman depolayabilir ve aşağıdaki durum geçiş diyagramı ile modellenir. N değişkeni o anda depolanan elemanların sayısını temsil eder. Olay dizileri olarak temsil edilen aşağıdaki test senaryolarından hangisi EN YÜKSEK düzeyde geçerli geçiş kapsamına ulaşır?
+a) Ekle, Kaldır, Ekle, Ekle, Ekle
+b) Ekle, Ekle, Ekle, Kaldır, Kaldır
+c) Ekle, Ekle, Ekle, Kaldır, Kaldır
+d) Ekle, Ekle, Ekle, Kaldır, Ekle
+CEVAP: c
+
+SORU 24
+Aynı kod üzerinde T1 ve T2 olmak üzere iki test senaryosu çalıştırdığınızı varsayın. T1 testi %40 komut kapsamı ve T2 testi %65 komut kapsamı elde etti. Aşağıdaki ifadelerden hangisi KESİNLİKLE doğrudur?
+a) T1 ve T2 testlerinden oluşan test grubu %105 komut kapsamına ulaşır.
+b) Hem T1 hem de T2 tarafından koşulmuş olması gereken en az bir komut vardır.
+c) Test edilen koddaki komutların en az %5'i çalıştırılamaz.
+d) T1 ve T2 testlerinden oluşan test grubu tam dal kapsamına ulaşır.
+CEVAP: b
+
+SORU 25
+Dal kapsama metriği BCov = (X / Y) * %100 olarak tanımlandığını varsayın. Bu formülde X ve Y neyi temsil etmektedir?
+a) X = test senaryoları tarafından uygulanan karar sonuçlarının sayısı, Y = koddaki toplam karar sonucu sayısı
+b) X = test senaryoları tarafından uygulanan koşullu dal sayısı, Y = koddaki toplam dal sayısı
+c) X = test senaryoları tarafından uygulanan dal sayısı, Y = koddaki toplam dal sayısı
+d) X = test senaryoları tarafından uygulanan koşullu dal sayısı, Y = koddaki toplam karar sonucu sayısı
+CEVAP: c
+
+SORU 26
+Keşif testlerini kullanmak için aşağıdaki ifadelerden hangi İKİ'si EN İYİ gerekçeleri sağlar?
+a) Test uzmanlarına test tasarımı ve testin yürütülmesi için yeterli zaman ayrılmamıştır.
+b) Mevcut test stratejisi, test uzmanlarının resmi, kara kutu test tekniklerini kullanmasını gerektirir.
+c) Spesifikasyon, bir araç tarafından işlenebilen resmi bir dilde yazılmıştır.
+d) Test uzmanları çevik bir ekibin üyeleridir ve iyi programlama becerilerine sahiptir.
+e) Test uzmanları iş alanında deneyimlidir ve iyi analitik becerilere sahiptir.
+CEVAP: a, e
+
+SORU 27
+Aşağıdakilerden hangisi checklist'e (kontrol listesi) dayalı testlerde kullanılan checklist'in bir unsuruna EN UYGUNDUR?
+a) "Geliştirici kodu uygularken bir hata(error) yaptı"
+b) "Elde edilen komut kapsamı %85'i aşıyor"
+c) "Program fonksiyonel ve fonksiyonel olmayan gereksinimler açısından doğru çalışıyor"
+d) "Hata mesajları kullanıcının anlayabileceği bir dilde yazılmıştır"
+CEVAP: d
+
+SORU 28
+Bir online mağaza sahibinin bakış açısından yazılmış bir kullanıcı hikayesi için aşağıdaki kabul kriterlerini göz önünde bulundurduğunuzda; Kullanıcının oturum açtığı ve ana sayfada olduğu varsayıldığında, Kullanıcı "Ürün Ekle" butonuna tıkladığında, "Ürün Oluştur" formu görünmeli ve kullanıcı yeni ürün için bir ad ve fiyat girebilmelidir. Bahsedilen kabul kriteri hangi formatta yazılmıştır?
+a) Kural odaklı
+b) Senaryo odaklı
+c) Ürün odaklı
+d) Süreç odaklı
+CEVAP: b
+
+SORU 29
+Ekiptinizin kabul kriterlerini tanımlamak için aşağıdaki kullanıcı hikayesini analiz ettiğini varsayın: Kayıtlı bir müşteri olarak, satın alımlarımı takip edebilmek için şirketin web sitesinde önceki siparişlerimi görüntüleyebilmek istiyorum. Aşağıdaki test senaryolarından hangisi bu kullanıcı hikayesiyle ilgili OLMAYACAKTIR?
+a) Girdi: müşteri web sitesindeki hesabına giriş yapar ve "sipariş geçmişini gör" butonuna tıklar. Beklenen çıktı: sistem, tarih, sipariş numarası ve toplam maliyet dahil olmak üzere müşterinin önceki tüm siparişlerinin bir listesini gösterir.
+b) Girdi: müşteri sipariş listesinden bir siparişe tıklar. Beklenen çıktı: sistem satın alınan ürünleri fiyatları ve miktarlarıyla birlikte tek tek görüntüler.
+c) Girdi: müşteri sipariş geçmişi ekranında "Artan şekilde sırala" butonuna tıklar. Beklenen çıktı: sistem sipariş geçmişini sipariş numarasına göre artan sırada sıralanmış olarak gösterir.
+d) Girdi: kayıtlı olmayan bir müşteri, müşteri veri tabanında önceden bulunmayan geçerli bir e-posta adresiyle yeni bir müşteri olarak kaydolur. Beklenen çıktı: sistem kaydı kabul eder ve hesabı oluşturur.
+CEVAP: d
+
+SORU 30
+Ekiptinizin, DevOps teslimat hattını kullanan süreci takip ettiğini varsayın. Bu sürecin ilk üç adımı şunlardır: (1) Kod geliştirme (2) Kodu bir sürüm kontrol sistemine gönderme ve "test" dalıyla birleştirme (3) Gönderilen kod için bileşen testi gerçekleştirme Aşağıdakilerden hangisi bu teslimat hattının (2) numaralı adımı için giriş kriteri olarak EN UYGUNDUR?
+a) Statik analiz, gönderilen kod için yüksek önem derecesine sahip uyarılar vermez.
+b) Sistem sürüm kontrolü, kodu "test" dalıyla birleştirirken çakışma olduğunu bildirmez.
+c) Bileşen testleri derlenir ve koşulmaya hazırlanır.
+d) Komut kapsamı en az %80'dir.
+CEVAP: a
+
+SORU 31
+Yeni bir proje için oranlara dayalı tahmin kullanarak test eforunu tahmin ettiğinizi varsayın. Yeni projeye benzer dört geçmiş projeden hem geliştirme eforu hem de test eforu için ortalama verileri kullanarak test-geliştirme eforu oranını hesaplıyorsunuz. Tabloda bu geçmiş veriler gösterilmektedir.
+Proje: P1 - Geliştirme eforu: $800,000, Test eforu: $40,000
+Proje: P2 - Geliştirme eforu: $1,200,000, Test eforu: $130,000
+Proje: P3 - Geliştirme eforu: $600,000, Test eforu: $70,000
+Proje: P4 - Geliştirme eforu: $1,000,000, Test eforu: $120,000
+Yeni proje için tahmini geliştirme eforu 800.000 $ ise, bu projedeki test çalışmaları için efor tahmininiz aşağıdakilerden hangisidir?
+a) $40,000
+b) $80,000
+c) $81,250
+d) $82,500
+CEVAP: b
+
+SORU 32
+Kullanıcıların ürün ARAmasına, ürün ayrıntılarını GÖRÜNTÜLEmesine, ürünleri bir alışveriş sepetine EKLEmesine ve SİPARİŞ VERMEsine olanak tanıyan bir web uygulamasını test ettiğinizi varsayın. Aşağıdaki yedi test senaryosunu hazırladınız ve bunların tümünü koşmak istiyorsunuz. Testler, test önceliğine göre en iyi sırada koşulmalıdır.
+Test senaryosu: TC1 - A ürününü ARA, Öncelik: 4
+Test senaryosu: TC2 - B ürününü ARA, Öncelik: 4
+Test senaryosu: TC3 - Ürün A ayrıntılarını GÖRÜNTÜLE, Öncelik: 3
+Test senaryosu: TC4 - Ürün B ayrıntılarını GÖRÜNTÜLE, Öncelik: 2
+Test senaryosu: TC5 - A ürününü alışveriş sepetine EKLE, Öncelik: 3
+Test senaryosu: TC6 - B ürününü alışveriş sepetine EKLE, Öncelik: 1
+Test senaryosu: TC7 - SİPARİŞ VER, Öncelik: 5
+Ayrıca test senaryoları arasında aşağıdaki mantıksal bağlılıkları da belirlediniz:
+• GÖRÜNTÜLE fonksiyonu test edilmeden önce ARA fonksiyonu test edilmelidir.
+• GÖRÜNTÜLE fonksiyonu EKLE fonksiyonundan önce test edilmelidir.
+• EKLE fonksiyonu SİPARİŞ fonksiyonundan önce test edilmelidir.
+Bu durumda, dördüncü olarak hangi test senaryosu koşulmalıdır?
+a) TC3
+b) TC1
+c) TC7
+d) TC2
+CEVAP: b
+
+SORU 33
+Test çeyrekleri modeline göre, aşağıdakilerden hangisi Q1 ("teknolojiye dönük" ve "ekibi destekleme") çeyreğine girer?
+a) Kullanılabilirlik testi
+b) Fonksiyonel test
+c) Kullanıcı kabul testi
+d) Bileşen entegrasyon testi
+CEVAP: d
+
+SORU 34
+Aşağıdaki riskler hangi azaltma faaliyetleriyle EN İYİ şekilde eşleştirilir?
+1. Etkin olmayan döngü uygulamasının uzun sistem yanıtlarına neden olması
+2. Tüketicilerin tercihlerini değiştirmesi
+3. Sunucu odasını su basması
+4. Belirli bir yaşın üzerindeki hastaların hatalı raporlar alması
+A. Risk kabulü
+B. Performans testi
+C. Test tekniği olarak sınır değer analizinin kullanılması
+D. Risk transferi
+a) 1C, 2D, 3A, 4B
+b) 1B, 2D, 3A, 4C
+c) 1B, 2A, 3D, 4C
+d) 1C, 2A, 3D, 4B
+CEVAP: c
+
+SORU 35
+Aşağıdakilerden hangisi bir ürün kalite metriğidir?
+a) Ortalama hata süresi
+b) Bulunan hata sayısı
+c) Gereksinim kapsamı
+d) Hata tespit yüzdesi
+CEVAP: a
+
+SORU 36
+Kuzey Amerika'da bulunan bir test ekibinin üyesi olduğunuzu ve Avrupa'da bulunan bir müşteri için bir ürün geliştirdiğinizi varsayın. Ekip çeviktir, DevOps yaklaşımını takip eder ve sürekli entegrasyon / sürekli teslimat veri hattı kullanır. Aşağıdakilerden hangisi test ilerlemesini müşteriye bildirmenin EN ETKİSİZ yoludur?
+a) Yüz yüze
+b) Gösterge Tabloları
+c) E-posta
+d) Video konferans
+CEVAP: a
+
+SORU 37
+Aşağıdakilerden hangisi yapılandırma yönetiminin (configuration management - CM) testleri nasıl desteklediğine dair EN İYİ örnektir?
+a) Ortamın sürüm numarasına sahip olan yapılandırma yönetimi aracı, bu ortamda kullanılan kütüphanelerin, taslakların ve sürücülerin sürüm numaralarını alabilir.
+b) Test girdilerinin değerlerinin bir kaydına sahip olan yapılandırma yönetimi aracı, bu yapılandırmalar için test senaryolarını yürütebilir ve test kapsamını hesaplayabilir.
+c) Bir yazılım lisansının satın alındığı tarihle ilgili verilere sahip olan yapılandırma yönetimi aracı, ürün lisansının sona ermekte olduğu hakkında otomatik olarak bilgi üretir.
+d) Test senaryosunun sürüm numarasına sahip olan yapılandırma yönetimi aracı, bu test senaryosu için otomatik olarak test verileri oluşturabilir.
+CEVAP: a
+
+SORU 38
+Girdi olarak bir dizi sayı alan ve aynı sayı kümesini artan sırada sıralanmış olarak döndüren bir sıralama işlevini test ettiğinizi varsayın. Test koşum günlüğü aşağıdaki gibi görünmektedir. Aşağıdakilerden hangisi bir hata raporunda kullanılabilecek EN İYİ hata tanımını sağlar?
+a) Sistem birkaç sayı kümesini sıralayamıyor. Referans: TC3, TC4, TC5.
+b) Sistem sıralama yaparken kopyaları göz ardı ediyor gibi görünüyor. Referans: TC3, TC4, TC5.
+c) Sistem negatif sayıları sıralayamıyor. Referans: TC4, TC5.
+d) TC3, TC4 ve TC5'te hatalar (yinelenen giriş verileri) vardır ve düzeltilmelidir.
+CEVAP: b
+
+SORU 39
+Aşağıdaki açıklamalar hangi test aracı kategorileri ile EN İYİ eşleşir?
+1. İş akışı takibinin desteklenmesi
+2. İletişimin kolaylaştırılması
+3. Sanal makineler
+4. Destek gözden geçirmeleri
+A. Statik test araçları
+B. Ölçeklenebilirliği ve dağıtım standardizasyonunu destekleyen araçlar
+C. DevOps araçları
+D. İş birliği araçları
+a) 1A, 2B, 3C, 4D
+b) 1B, 2D, 3C, 4A
+c) 1C, 2D, 3B, 4A
+d) 1D, 2C, 3A, 4B
+CEVAP: c
+
+SORU 40
+Aşağıdakilerden hangisinin test otomasyonunun yararlarından biridir?
+a) Oluşturması insanlar için çok karmaşık olan kapsam ölçütleri sağlar.
+b) Test sorumluluğunu araç tedarikçisi ile paylaşır.
+c) Test sonuçlarını analiz ederken eleştirel düşünme ihtiyacını ortadan kaldırır.
+d) Program kodunun analizinden test senaryoları oluşturur.
+CEVAP: a
+

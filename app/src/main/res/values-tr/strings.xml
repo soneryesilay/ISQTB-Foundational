@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ISTQB Sınav Simülatörü</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_title">Ana Sayfa</string>
+    <string name="quick_exam">Hızlı Sınav</string>
+    <string name="practice_mode">Pratik Mod</string>
+    <string name="question_sets">Soru Setleri</string>
+    <string name="total_attempts">Toplam Deneme</string>
+    <string name="average_success">Ortalama Başarı</string>
+    <string name="recent_attempts">Son Denemeler</string>
+    
+    <!-- Exam Setup -->
+    <string name="exam_setup_title">Sınav Ayarları</string>
+    <string name="select_question_sets">Soru Setleri Seçin</string>
+    <string name="question_count">Soru Sayısı</string>
+    <string name="duration_minutes">Süre (Dakika)</string>
+    <string name="pass_threshold">Baraj (%)</string>
+    <string name="shuffle_questions">Soruları Karıştır</string>
+    <string name="shuffle_options">Şıkları Karıştır</string>
+    <string name="seed">Tohum (Seed)</string>
+    <string name="start_exam">Başla</string>
+    
+    <!-- Exam Screen -->
+    <string name="exam_title">Sınav</string>
+    <string name="time_remaining">Kalan Süre</string>
+    <string name="question_counter">%1$d / %2$d</string>
+    <string name="flag_question">Soruyu İşaretle</string>
+    <string name="unflag_question">İşareti Kaldır</string>
+    <string name="previous">Önceki</string>
+    <string name="next">Sonraki</string>
+    <string name="finish_exam">Sınavı Bitir</string>
+    <string name="confirm_finish_title">Sınavı Bitirmek İstiyor musunuz?</string>
+    <string name="confirm_finish_message">%1$d soruyu boş bırakmak üzeresiniz. Sınavı bitirmek istiyor musunuz?</string>
+    <string name="confirm">Onayla</string>
+    <string name="cancel">İptal</string>
+    
+    <!-- Result Screen -->
+    <string name="result_title">Sınav Sonucu</string>
+    <string name="total_questions">Toplam Soru</string>
+    <string name="correct">Doğru</string>
+    <string name="wrong">Yanlış</string>
+    <string name="blank">Boş</string>
+    <string name="success_percentage">Başarı Yüzdesi</string>
+    <string name="passed">GEÇTİ</string>
+    <string name="failed">KALDI</string>
+    <string name="time_used">Kullanılan Süre</string>
+    <string name="detailed_review">Detaylı İnceleme</string>
+    <string name="back_to_home">Ana Sayfaya Dön</string>
+    
+    <!-- Review Screen -->
+    <string name="review_title">Soruların İncelenmesi</string>
+    <string name="your_answer">Sizin Cevabınız</string>
+    <string name="correct_answer">Doğru Cevap</string>
+    <string name="not_answered">Cevap Verilmedi</string>
+    
+    <!-- Question Sets -->
+    <string name="question_sets_title">Soru Setleri</string>
+    <string name="import_from_file">Dosyadan İçe Aktar</string>
+    <string name="no_question_sets">Henüz soru seti yok</string>
+    <string name="import_success">Soru seti başarıyla içe aktarıldı</string>
+    <string name="import_error">Soru seti içe aktarılamadı: %1$s</string>
+    <string name="questions_count">%1$d soru</string>
+    
+    <!-- Practice Mode -->
+    <string name="practice_mode_title">Pratik Mod</string>
+    <string name="unlimited_time">Sınırsız Süre</string>
+    
+    <!-- General -->
+    <string name="loading">Yükleniyor…</string>
+    <string name="error">Hata</string>
+    <string name="ok">Tamam</string>
+</resources>
+

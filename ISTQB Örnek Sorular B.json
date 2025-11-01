@@ -1,0 +1,611 @@
+{
+  "meta": {
+    "title": "ISTQB CTFL v4 TR - Örnek Sınav (Set 2)",
+    "version": "1.6",
+    "lang": "tr",
+    "source": "ttb_sample_v1_6"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-1.2.1",
+      "kLevel": "K2",
+      "text": "Aşağıdakilerden hangisi testin neden gerekli olduğuna dair bir örnektir?",
+      "options": {
+        "a": "Dinamik testler, test nesnelerinin kullanıcıların asla sağlayamayacağı şekillerde başarısız olmasına neden olarak kaliteyi artırır.",
+        "b": "Statik testler, yazılım geliştiriciler tarafından program kodlarındaki hataları dinamik testlerden daha erken tespit etmek için kullanılır.",
+        "c": "Statik analiz, müşterilere hiçbir çıktı sağlamayan sistem unsurlarının piyasaya sürülmeye uygun olduğuna dair kanıt sağlar.",
+        "d": "İncelemeler gereksinim spesifikasyonlarının kalitesini artırır ve elde edilen çalışma ürünlerinde daha az değişikliğe ihtiyaç duyulmasını sağlar."
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 2,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-1.2.2",
+      "kLevel": "K1",
+      "text": "Kalite güvencesi (QA) ve/veya kalite kontrolü (QC) ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "a": "Kalite güvencesi, testin bir parçası olarak gerçekleştirilir.",
+        "b": "Testler, kalite kontrolünün bir parçası olarak gerçekleştirilir.",
+        "c": "Test, kalite kontrolünün bir diğer adıdır.",
+        "d": "Testler, kalite güvencesinin bir parçası olarak gerçekleştirilir."
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 3,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-1.3.1",
+      "kLevel": "K2",
+      "text": "“Test ilkeleri”nden biri yazılımı %100 test etmenin imkansız olduğunu belirtir. Bu ilkenin pratikte uygulanmasına bir örnek hangisidir?",
+      "options": {
+        "a": "Test senaryolarının belirlenmiş her olası çıktıyı kapsayacak şekilde oluşturulması",
+        "b": "Tüm olası test girdisi varyasyonlarının dokümante edilmesi ve bunların önem sırasına göre önceliklendirilmesi",
+        "c": "İncelemeler ve diğer statik test yaklaşımları ile testlere mümkün olduğunca erken başlanması",
+        "d": "Test senaryoların oluşturulması için denklik paylarına ayırma ve sınır değer analizinin kullanılması"
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 4,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-1.4.1",
+      "kLevel": "K2",
+      "text": "Hangi test aktivitesi, test verisi gereksinimleri, test koşulları, test ortamı gereksinimleri ve test senaryoları ile çalışmayı içerir?",
+      "options": {
+        "a": "Test tasarımı",
+        "b": "Test koşumu",
+        "c": "Test analizi",
+        "d": "Test uyarlaması"
+      },
+      "answer": ["a"]
+    },
+    {
+      "id": 5,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-1.4.2",
+      "kLevel": "K2",
+      "text": "Aşağıdakilerden hangisinin belirli bir test nesnesi için testin nasıl gerçekleştirildiğini etkileme olasılığı EN YÜKSEKTİR?",
+      "options": {
+        "a": "Organizasyonun pazarlama ekibinin ortalama deneyim seviyesi",
+        "b": "Kullanıcıların kendileri için yeni bir sistem geliştirildiğini bilmeleri",
+        "c": "Test ekibi üyelerinin kaç yıllık deneyime sahip olduğu",
+        "d": "Ticari bir müzik dinleme uygulaması için son kullanıcının organizasyon yapısı"
+      },
+      "answer": ["c"]
+    },
+    {
+      "id": 6,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-1.4.4",
+      "kLevel": "K2",
+      "text": "İzlenebilirliğin önemine ilişkin doğru örnek hangisidir?",
+      "options": {
+        "a": "Azaltılan riskler ve başarılı test senaryoları arasındaki izlenebilirlik, kalan risk seviyesinin belirlenmesini sağlar.",
+        "b": "Kullanıcı gereksinimleri ve test uyarlama sonuçları arasındaki izlenebilirlik, projenin iş hedeflerine göre ilerlemesinin ölçülebilmesini sağlar.",
+        "c": "Test uzmanları ve başarısız test senaryoları arasındaki izlenebilirlik, test uzmanlarının beceri düzeyinin belirlenebilmesini sağlar.",
+        "d": "Belirlenen riskler ve yazılı test koşulları arasındaki izlenebilirlik, hangi risklerin test edilmeye değer olduğunun belirlenebilmesini sağlar."
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 7,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-1.5.1",
+      "kLevel": "K2",
+      "text": "Bir test uzmanının test yaparken genel becerileri kullanmasına en uygun örnek hangisidir?",
+      "options": {
+        "a": "Bilgisayar oyunlarına ilgisi sayesinde geliştiricilerden biriyle iyi geçinmesi",
+        "b": "Eski pilot olarak helikopter kontrol sistemi kabul kriterlerini daha iyi anlaması",
+        "c": "Önceden programcı olması sayesinde iş analistleriyle daha iyi iletişim kurması",
+        "d": "Keşif testine başlamadan önce senaryoları metodik oluştururken hata yapmamaya çok dikkat etmesi"
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 8,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-1.5.2",
+      "kLevel": "K1",
+      "text": "Tüm ekip yaklaşımının avantajlarından biri hangisidir?",
+      "options": {
+        "a": "Ekip üyelerinin herhangi bir zamanda herhangi bir rolü üstlenmesine olanak tanır.",
+        "b": "Tüm geliştirme projesini desteklemek için yalnızca tek bir ekibe ihtiyaç duyar.",
+        "c": "İş temsilcilerini geliştiricilerle aynı ekibe dahil eder.",
+        "d": "Tüm projeye fayda sağlayan bir ekip sinerjisi oluşturur."
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 9,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-2.1.1",
+      "kLevel": "K2",
+      "text": "Yazılım Geliştirme Yaşam Döngüsü çeşitleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "a": "Çevik geliştirmede sistem testi otomasyonu, regresyon testinin yerini alır.",
+        "b": "Sıralı model kullanılıyorsa dinamik testler genellikle yaşam döngüsünün ilerleyen aşamalarıyla sınırlandırılır.",
+        "c": "Yinelemeli modelde bileşen testleri genellikle geliştiriciler tarafından manuel yapılır.",
+        "d": "Artımlı modelde statik testler erken, dinamik testler sonraki aşamalarda yapılır."
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-2.1.2",
+      "kLevel": "K1",
+      "text": "Tüm YGYD modelleri için geçerli olan iyi bir test uygulaması hangisidir?",
+      "options": {
+        "a": "Çalışma ürünlerini bir sonraki geliştirme aşamasının parçası olarak gözden geçirmek",
+        "b": "Taslaklar hazır olur olmaz çalışma ürünlerini gözden geçirmek",
+        "c": "Test analizi ve tasarımına başlamadan önce çalışma ürünlerini gözden geçirmek",
+        "d": "Çalışma ürünlerini yayınlandıktan hemen sonra gözden geçirmek"
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 11,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-2.1.3",
+      "kLevel": "K1",
+      "text": "Aşağıdakilerden hangisi test öncelikli geliştirme yaklaşımına bir örnektir?",
+      "options": {
+        "a": "Test Güdümlü Geliştirme",
+        "b": "Kapsama Güdümlü Geliştirme",
+        "c": "Kalite Güdümlü Geliştirme",
+        "d": "Özellik Güdümlü Geliştirme"
+      },
+      "answer": ["a"]
+    },
+    {
+      "id": 12,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-2.1.4",
+      "kLevel": "K2",
+      "text": "DevOps ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "a": "Sürümleri hızlandırmak için bileşen testlerini tamamlamadan kod göndermeyi teşvik eden sürekli entegrasyon kullanılır.",
+        "b": "Daha sık güncellemek ve piyasaya sürmek için regresyon riskini azaltacak birçok otomatize regresyon testi gerekir.",
+        "c": "Shift-right ile operatörlerin yaptığı sürüm testine daha çok efor vermek gerekir.",
+        "d": "Sinerji için testler tamamen otomatize edilmeli ve manuel test olmamalıdır."
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 13,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-2.2.1",
+      "kLevel": "K2",
+      "text": "Sistem testinin bir parçası olarak gerçekleştirilme olasılığı en yüksek etkinlik hangisidir?",
+      "options": {
+        "a": "Bağımsız test ekibinin bir kredi yönetim sisteminde güvenlik testi yapması",
+        "b": "Döviz bozdurma sisteminin harici bankacılık sistemiyle arayüzünün test edilmesi",
+        "c": "Eğitim yazılımı geliştiricilerinin uzaktan eğitim sisteminin beta testini yapması",
+        "d": "Bir İK sisteminin kullanıcı arayüzü ile veritabanı arasındaki etkileşimlerin test edilmesi"
+      },
+      "answer": ["a"]
+    },
+    {
+      "id": 14,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-2.2.3",
+      "kLevel": "K2",
+      "text": "Aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "a": "Regresyon testleri proje ilerledikçe artarken, onaylama testleri azalır.",
+        "b": "Regresyon testleri nesne sabitlendiğinde yapılır; onaylama testleri nesne geliştirildiğinde çalıştırılır.",
+        "c": "Regresyon testi operasyonel ortamın değişmeden kaldığını kontrol eder; onaylama testi test nesnesindeki değişiklikleri test eder.",
+        "d": "Regresyon testi değişmeyen koddaki olumsuz etkilerle; onaylama testi değişen kodun test edilmesiyle ilgilenir."
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 15,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-3.1.3",
+      "kLevel": "K2",
+      "text": "Statik test ile bulunabilirken dinamik test ile bulunamayan bir hataya örnek hangisidir?",
+      "options": {
+        "a": "Kullanıcı arayüzünde oluşan kullanılabilirlik eksikliği",
+        "b": "Kendisine ulaşan bir yol olmayan kod",
+        "c": "Beklenen kullanıcıların çoğu için zayıf yanıt süreleri",
+        "d": "Kodda uygulanmayan gerekli özellikler"
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 16,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-3.2.1",
+      "kLevel": "K1",
+      "text": "Paydaşlardan erken ve sık geri bildirim almanın faydalarından biri hangisidir?",
+      "options": {
+        "a": "Yöneticiler hangi geliştiricilerin daha az üretken olduğunun farkına varır.",
+        "b": "Proje yöneticilerinin paydaş etkileşimlerine öncelik vermelerini sağlar.",
+        "c": "Potansiyel kalite sorunlarının erken iletişimini kolaylaştırır.",
+        "d": "Son kullanıcılar teslimat gecikme nedenlerini daha iyi anlar."
+      },
+      "answer": ["c"]
+    },
+    {
+      "id": 17,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-3.2.2",
+      "kLevel": "K2",
+      "text": "Görev tanımları ile gözden geçirme faaliyetlerini eşleyin: 1) Değerlendirilecek kalite özellikleri ve çıkış kriterleri seçilir. 2) Herkesin çalışma ürünlerine erişimi vardır. 3) Çalışma ürünlerinde anormallikler tespit edilir. 4) Anomaliler tartışılır.",
+      "options": {
+        "a": "1B, 2C, 3D, 4A",
+        "b": "1B, 2D, 3C, 4A",
+        "c": "1C, 2A, 3B, 4D",
+        "d": "1C, 2B, 3A, 4D"
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 18,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-3.2.3",
+      "kLevel": "K1",
+      "text": "Görev tanımları ile rol/sorumlulukları eşleyin: 1) Katip (Scribe) 2) Gözden geçirme lideri 3) Kolaylaştırıcı 4) Yönetici.",
+      "options": {
+        "a": "1A, 2B, 3D, 4C",
+        "b": "1A, 2C, 3B, 4D",
+        "c": "1B, 2D, 3A, 4C",
+        "d": "1B, 2D, 3C, 4A"
+      },
+      "answer": ["c"]
+    },
+    {
+      "id": 19,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.1.1",
+      "kLevel": "K2",
+      "text": "Karar tablosu testi ile dal testi arasındaki farkı en iyi açıklayan ifade hangisidir?",
+      "options": {
+        "a": "Karar tablosu testinde senaryolar koddaki karar ifadelerinden türetilir; dal testinde kontrol akışı bilgisinden türetilir.",
+        "b": "Karar tablosu testinde senaryolar iş mantığı spesifikasyonundan türetilir; dal testinde kaynak koddaki hataların öngörülmesine dayanır.",
+        "c": "Karar tablosu testinde senaryolar kontrol akışından; dal testinde iş mantığı spesifikasyonundan türetilir.",
+        "d": "Karar tablosu testinde senaryolar uygulamadan bağımsızdır; dal testi kod tasarım/uygulamasından sonra oluşturulabilir."
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 20,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.2.1",
+      "kLevel": "K3",
+      "text": "TestWash oto yıkama zincirinde indirimler: her 10. yıkamada %10, her 20. yıkamada ek %40 (toplam %50). Hangi mevcut yıkama sayıları seti en yüksek denklik payı kapsamına ulaşır?",
+      "options": {
+        "a": "19, 20, 30",
+        "b": "11, 12, 20",
+        "c": "1, 10, 50",
+        "d": "10, 29, 30, 31"
+      },
+      "answer": ["a"]
+    },
+    {
+      "id": 21,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.2.2",
+      "kLevel": "K3",
+      "text": "Parola uzunluğu 6–12 kabul, aksi reddedilir. %100 2-değerli Sınır Değer kapsamı mevcut. %100 3-değerli Sınır Değer kapsamına ulaşmak için hangi ek uzunluklar test edilmelidir?",
+      "options": {
+        "a": "4, 5, 13, 14",
+        "b": "7, 11",
+        "c": "1, 5, 13",
+        "d": "1, 4, 7, 11, 14"
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 22,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.2.3",
+      "kLevel": "K3",
+      "text": "Ateroskleroz riskine ilişkin karar tablosu ve verilen test girişleri için elde edilen karar tablosu kapsamı nedir?",
+      "options": {
+        "a": "40%",
+        "b": "60%",
+        "c": "80%",
+        "d": "100%"
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 23,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.2.4",
+      "kLevel": "K3",
+      "text": "En fazla üç eleman depolayan ve N’in o anki eleman sayısı olduğu durum makinesinde, hangi olay dizisi en yüksek geçerli geçiş kapsamına ulaşır?",
+      "options": {
+        "a": "Ekle, Kaldır, Ekle, Ekle, Ekle",
+        "b": "Ekle, Ekle, Ekle, Kaldır, Kaldır",
+        "c": "Ekle, Ekle, Ekle, Kaldır, Kaldır",
+        "d": "Ekle, Ekle, Ekle, Kaldır, Ekle"
+      },
+      "answer": ["c"]
+    },
+    {
+      "id": 24,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.3.1",
+      "kLevel": "K2",
+      "text": "Aynı kod üzerinde T1=%40 komut kapsamı ve T2=%65 komut kapsamı varsa hangisi kesinlikle doğrudur?",
+      "options": {
+        "a": "T1+T2 grubu %105 komut kapsamına ulaşır.",
+        "b": "Hem T1 hem T2 tarafından çalıştırılmış en az bir komut vardır.",
+        "c": "Komutların en az %5’i çalıştırılamaz.",
+        "d": "T1+T2 grubu tam dal kapsamına ulaşır."
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 25,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.3.2",
+      "kLevel": "K2",
+      "text": "Dal kapsama metriği BCov = (X / Y) * %100. X ve Y neyi temsil eder?",
+      "options": {
+        "a": "X: uygulanan karar sonuçları, Y: toplam karar sonucu",
+        "b": "X: uygulanan koşullu dal sayısı, Y: toplam dal sayısı",
+        "c": "X: uygulanan dal sayısı, Y: toplam dal sayısı",
+        "d": "X: uygulanan koşullu dal sayısı, Y: toplam karar sonucu sayısı"
+      },
+      "answer": ["c"]
+    },
+    {
+      "id": 26,
+      "type": "multiple",
+      "score": 1,
+      "lo": "FL-4.4.2",
+      "kLevel": "K2",
+      "text": "Keşif testlerini kullanmak için hangi İKİ ifade en iyi gerekçeyi sağlar?",
+      "options": {
+        "a": "Test tasarımı ve yürütme için yeterli zaman ayrılmamıştır.",
+        "b": "Mevcut strateji resmi kara kutu tekniklerini gerektirir.",
+        "c": "Spesifikasyon, araç tarafından işlenebilir resmi bir dildedir.",
+        "d": "Test uzmanları çevik ekip üyesidir ve iyi programlama becerileri vardır.",
+        "e": "Test uzmanları iş alanında deneyimlidir ve iyi analitik becerilere sahiptir."
+      },
+      "answer": ["a", "e"]
+    },
+    {
+      "id": 27,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.4.3",
+      "kLevel": "K2",
+      "text": "Checklist’e dayalı testlerde kullanılan checklist’in bir unsuruna en uygunu hangisidir?",
+      "options": {
+        "a": "Geliştirici kodu uygularken bir hata(error) yaptı",
+        "b": "Elde edilen komut kapsamı %85'i aşıyor",
+        "c": "Program fonksiyonel ve fonksiyonel olmayan gereksinimler açısından doğru çalışıyor",
+        "d": "Hata mesajları kullanıcının anlayabileceği bir dilde yazılmıştır"
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 28,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.5.2",
+      "kLevel": "K2",
+      "text": "Online mağaza kullanıcısı için verilen kabul kriteri hangi formatta yazılmıştır? (Giriş: oturum açık ve ana sayfada, kullanıcı 'Ürün Ekle'ye tıklayınca 'Ürün Oluştur' formu görünür ve ad/fiyat girilebilir.)",
+      "options": {
+        "a": "Kural odaklı",
+        "b": "Senaryo odaklı",
+        "c": "Ürün odaklı",
+        "d": "Süreç odaklı"
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 29,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-4.5.3",
+      "kLevel": "K3",
+      "text": "“Kayıtlı müşteri olarak önceki siparişlerimi görüntülemek istiyorum” hikayesine ilişkin aşağıdaki test senaryolarından hangisi OLMAYACAKTIR?",
+      "options": {
+        "a": "Girdi: müşteri giriş yapar ve 'sipariş geçmişini gör' tıklar → çıktı: tüm geçmiş siparişler listelenir.",
+        "b": "Girdi: müşteri listeden bir siparişi tıklar → çıktı: ürünler fiyat ve miktarlarıyla gösterilir.",
+        "c": "Girdi: müşteri 'Artan sırala' tıklar → çıktı: siparişler sipariş numarasına göre artan sıralanır.",
+        "d": "Girdi: kayıtlı olmayan müşteri yeni kayıt olur → çıktı: sistem kaydı kabul eder ve hesap oluşturur."
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 30,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-5.1.3",
+      "kLevel": "K2",
+      "text": "DevOps teslimat hattı adım (2) 'kodu sürüm kontrolüne gönder ve test dalıyla birleştir' için en uygun giriş kriteri hangisidir?",
+      "options": {
+        "a": "Statik analiz, gönderilen kod için yüksek önem derecesine sahip uyarılar vermez.",
+        "b": "Sürüm kontrolü birleştirirken çakışma olduğunu bildirmez.",
+        "c": "Bileşen testleri derlenir ve koşulmaya hazırlanır.",
+        "d": "Komut kapsamı en az %80'dir."
+      },
+      "answer": ["a"]
+    },
+    {
+      "id": 31,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-5.1.4",
+      "kLevel": "K3",
+      "text": "Oranlara dayalı tahmin: dört geçmiş projeden test/geliştirme oranı hesaplanıyor. Yeni proje geliştirme eforu 800.000$ ise test eforu tahmininiz nedir?",
+      "options": {
+        "a": "$40,000",
+        "b": "$80,000",
+        "c": "$81,250",
+        "d": "$82,500"
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 32,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-5.1.5",
+      "kLevel": "K3",
+      "text": "ARA → GÖRÜNTÜLE → EKLE → SİPARİŞ bağlılıkları ve verilen önceliklere göre dördüncü olarak hangi test koşulmalıdır?",
+      "options": {
+        "a": "TC3",
+        "b": "TC1",
+        "c": "TC7",
+        "d": "TC2"
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 33,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-5.1.7",
+      "kLevel": "K2",
+      "text": "Test çeyrekleri modelinde Q1 (teknolojiye dönük, ekibi destekleme) hangisidir?",
+      "options": {
+        "a": "Kullanılabilirlik testi",
+        "b": "Fonksiyonel test",
+        "c": "Kullanıcı kabul testi",
+        "d": "Bileşen entegrasyon testi"
+      },
+      "answer": ["d"]
+    },
+    {
+      "id": 34,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-5.2.4",
+      "kLevel": "K2",
+      "text": "Riskler ile azaltma faaliyetlerini eşleyin: 1) Etkin olmayan döngü uzun yanıt sürelerine yol açar 2) Tüketici tercih değişimi 3) Sunucu odasını su basması 4) Yaşlı hastaların hatalı rapor alması.",
+      "options": {
+        "a": "1C, 2D, 3A, 4B",
+        "b": "1B, 2D, 3A, 4C",
+        "c": "1B, 2A, 3D, 4C",
+        "d": "1C, 2A, 3D, 4B"
+      },
+      "answer": ["c"]
+    },
+    {
+      "id": 35,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-5.3.1",
+      "kLevel": "K1",
+      "text": "Aşağıdakilerden hangisi bir ürün kalite metriğidir?",
+      "options": {
+        "a": "Ortalama hata süresi",
+        "b": "Bulunan hata sayısı",
+        "c": "Gereksinim kapsamı",
+        "d": "Hata tespit yüzdesi"
+      },
+      "answer": ["a"]
+    },
+    {
+      "id": 36,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-5.3.3",
+      "kLevel": "K2",
+      "text": "Kuzey Amerika’daki test ekibiniz Avrupa’daki müşteriye CI/CD ile ürün geliştiriyor. Test ilerlemesini bildirmenin en etkisiz yolu hangisidir?",
+      "options": {
+        "a": "Yüz yüze",
+        "b": "Gösterge Tabloları",
+        "c": "E-posta",
+        "d": "Video konferans"
+      },
+      "answer": ["a"]
+    },
+    {
+      "id": 37,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-5.4.1",
+      "kLevel": "K2",
+      "text": "Yapılandırma yönetimi (CM) testleri nasıl destekler? En iyi örneği seçin.",
+      "options": {
+        "a": "Ortamın sürüm numarasını tutar ve bu ortamda kullanılan kütüphane/taslak/sürücü sürümlerini alabilir.",
+        "b": "Test girdisi değerlerini kaydeder, bu yapılandırmalar için test senaryolarını yürütebilir ve kapsamı hesaplayabilir.",
+        "c": "Lisans satın alma tarihi verisiyle lisans bitişi hakkında otomatik bilgi üretir.",
+        "d": "Test senaryosu sürüm numarasına göre otomatik test verisi oluşturabilir."
+      },
+      "answer": ["a"]
+    },
+    {
+      "id": 38,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-5.5.1",
+      "kLevel": "K3",
+      "text": "Sıralama fonksiyonunu test ettiniz. En iyi hata tanımı hangisidir?",
+      "options": {
+        "a": "Sistem birkaç sayı kümesini sıralayamıyor. Referans: TC3, TC4, TC5.",
+        "b": "Sistem sıralama yaparken kopyaları (tekrarlı elemanları) göz ardı ediyor gibi görünüyor. Referans: TC3, TC4, TC5.",
+        "c": "Sistem negatif sayıları sıralayamıyor. Referans: TC4, TC5.",
+        "d": "TC3, TC4 ve TC5'te hatalar (yinelenen giriş verileri) var ve düzeltilmelidir."
+      },
+      "answer": ["b"]
+    },
+    {
+      "id": 39,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-6.1.1",
+      "kLevel": "K2",
+      "text": "Açıklamaların test aracı kategorileri ile en iyi eşleşmesi hangisidir? 1) İş akışı takibi 2) İletişimin kolaylaştırılması 3) Sanal makineler 4) Gözden geçirmeleri destekleme.",
+      "options": {
+        "a": "1A, 2B, 3C, 4D",
+        "b": "1B, 2D, 3C, 4A",
+        "c": "1C, 2D, 3B, 4A",
+        "d": "1D, 2C, 3A, 4B"
+      },
+      "answer": ["c"]
+    },
+    {
+      "id": 40,
+      "type": "single",
+      "score": 1,
+      "lo": "FL-6.2.1",
+      "kLevel": "K1",
+      "text": "Test otomasyonunun yararlarından biri hangisidir?",
+      "options": {
+        "a": "Oluşturması insanlar için çok karmaşık olan kapsam ölçütleri sağlar.",
+        "b": "Test sorumluluğunu araç tedarikçisi ile paylaşır.",
+        "c": "Test sonuçlarını analiz ederken eleştirel düşünme ihtiyacını ortadan kaldırır.",
+        "d": "Program kodunun analizinden test senaryoları oluşturur."
+      },
+      "answer": ["a"]
+    }
+  ]
+}
