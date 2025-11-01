@@ -113,15 +113,17 @@ fun QuestionWithTables(
     // Format text to add line breaks for better readability
     fun formatText(input: String): String {
         return input
-            // Add line break after sentences ending with comma followed by number
-            .replace(Regex("([,;])\\s*(\\d+\\.)"), "$1\n\n$2")
-            // Add line break before numbered lists
-            .replace(Regex("([.!?])\\s+(\\d+\\.)"), "$1\n\n$2")
-            // Add line break after long sentences (more than 100 chars without break)
-            .replace(Regex("([.!?])\\s+([A-ZÇĞIÖŞÜ])")) { match ->
-                val before = match.groupValues[1]
-                val after = match.groupValues[2]
-                "$before\n\n$after"
+            // Add line break only after sentence endings followed by numbered lists
+            .replace(Regex("([.!?])\\s+(\\d+\\.)")) { match ->
+                val punctuation = match.groupValues[1]
+                val number = match.groupValues[2]
+                "$punctuation\n\n$number"
+            }
+            // Add line break after long sentences ending with period
+            .replace(Regex("([.])\\s+([A-ZÇĞIÖŞÜ][a-zçğıöşü]{3,})")) { match ->
+                val period = match.groupValues[1]
+                val word = match.groupValues[2]
+                "$period\n\n$word"
             }
     }
     

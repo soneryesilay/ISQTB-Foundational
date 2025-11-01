@@ -57,16 +57,20 @@ class ExamSetupViewModel(
 
     fun setupForMode(isPracticeMode: Boolean) {
         if (!isPracticeMode) {
-            // Sınava Başla: Karıştırma kapalı, süre var
+            // Sınava Başla: Karıştırma kapalı, tüm sorular, 60 dakika, %65 baraj
             _shuffleQuestions.value = false
             _shuffleOptions.value = false
             _seed.value = null
+            _totalQuestions.value = 40  // Tüm sorular
             _durationMinutes.value = 60
+            _passPercent.value = 65
         } else {
-            // Deneme Sınavı: Karıştırma açık, süre yok
+            // Deneme Sınavı: Kullanıcı ayarlayabilir
             _shuffleQuestions.value = true
             _shuffleOptions.value = true
-            _seed.value = Shuffler.generateSeed()
+            _totalQuestions.value = 40
+            _durationMinutes.value = 60
+            _passPercent.value = 65
         }
     }
 

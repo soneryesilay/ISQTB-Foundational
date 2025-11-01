@@ -280,10 +280,10 @@ fun GitHubFooter() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 24.dp),
+            .padding(vertical = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Divider(modifier = Modifier.padding(bottom = 16.dp))
+        Divider(modifier = Modifier.padding(bottom = 12.dp))
         
         Row(
             modifier = Modifier
@@ -299,23 +299,16 @@ fun GitHubFooter() {
                 imageVector = Icons.Default.Code,
                 contentDescription = "GitHub",
                 tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(18.dp)
             )
             Spacer(modifier = Modifier.width(8.dp))
             Text(
-                text = "soneryesilay",
-                style = MaterialTheme.typography.bodyMedium,
+                text = "github.com/soneryesilay",
+                style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.primary,
                 textDecoration = TextDecoration.Underline
             )
         }
-        
-        Text(
-            text = "Made with ❤️",
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.padding(top = 8.dp)
-        )
     }
 }
 

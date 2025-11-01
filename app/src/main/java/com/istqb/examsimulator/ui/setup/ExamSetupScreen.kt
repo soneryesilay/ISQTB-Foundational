@@ -118,22 +118,23 @@ fun ExamSetupScreen(
                 }
             }
 
-            // Total Questions
-            item {
-                OutlinedTextField(
-                    value = totalQuestionsText,
-                    onValueChange = {
-                        totalQuestionsText = it
-                        it.text.toIntOrNull()?.let { num -> viewModel.setTotalQuestions(num) }
-                    },
-                    label = { Text("Soru Sayısı") },
-                    modifier = Modifier.fillMaxWidth(),
-                    singleLine = true
-                )
-            }
+            // Settings - Only for Practice Mode
+            if (isPracticeMode) {
+                // Total Questions
+                item {
+                    OutlinedTextField(
+                        value = totalQuestionsText,
+                        onValueChange = {
+                            totalQuestionsText = it
+                            it.text.toIntOrNull()?.let { num -> viewModel.setTotalQuestions(num) }
+                        },
+                        label = { Text("Soru Sayısı") },
+                        modifier = Modifier.fillMaxWidth(),
+                        singleLine = true
+                    )
+                }
 
-            // Duration
-            if (!isPracticeMode) {
+                // Duration
                 item {
                     OutlinedTextField(
                         value = durationText,
@@ -146,20 +147,20 @@ fun ExamSetupScreen(
                         singleLine = true
                     )
                 }
-            }
 
-            // Pass Percent
-            item {
-                OutlinedTextField(
-                    value = passPercentText,
-                    onValueChange = {
-                        passPercentText = it
-                        it.text.toIntOrNull()?.let { num -> viewModel.setPassPercent(num) }
-                    },
-                    label = { Text("Baraj (%)") },
-                    modifier = Modifier.fillMaxWidth(),
-                    singleLine = true
-                )
+                // Pass Percent
+                item {
+                    OutlinedTextField(
+                        value = passPercentText,
+                        onValueChange = {
+                            passPercentText = it
+                            it.text.toIntOrNull()?.let { num -> viewModel.setPassPercent(num) }
+                        },
+                        label = { Text("Baraj (%)") },
+                        modifier = Modifier.fillMaxWidth(),
+                        singleLine = true
+                    )
+                }
             }
 
             // Shuffle Options - Only for Practice Mode
