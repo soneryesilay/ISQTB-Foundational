@@ -158,13 +158,8 @@ fun QuestionDetailCard(
                 color = MaterialTheme.colorScheme.primary
             )
             
-            Text(
-                text = question.text,
-                style = MaterialTheme.typography.bodyMedium.copy(
-                    fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
-                    lineHeight = 18.sp
-                ),
-                modifier = Modifier.horizontalScroll(rememberScrollState())
+            com.istqb.examsimulator.ui.components.QuestionWithTables(
+                text = question.text
             )
 
             // Image if exists

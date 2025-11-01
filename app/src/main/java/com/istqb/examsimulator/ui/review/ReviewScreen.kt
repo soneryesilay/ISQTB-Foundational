@@ -146,13 +146,8 @@ fun ReviewQuestionItem(
             }
 
             // Question Text
-            Text(
-                text = reviewItem.question.text,
-                style = MaterialTheme.typography.bodyLarge.copy(
-                    fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
-                    lineHeight = 20.sp
-                ),
-                modifier = Modifier.horizontalScroll(androidx.compose.foundation.rememberScrollState())
+            com.istqb.examsimulator.ui.components.QuestionWithTables(
+                text = reviewItem.question.text
             )
             
             // Question Image

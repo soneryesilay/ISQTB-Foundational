@@ -23,6 +23,7 @@ import androidx.compose.ui.window.Dialog
 import coil.compose.AsyncImage
 import com.istqb.examsimulator.data.model.Question
 import com.istqb.examsimulator.ui.exam.ExamViewModel
+import com.istqb.examsimulator.ui.components.QuestionWithTables
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -150,14 +151,7 @@ fun ExamScreen(
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Text(
-                        text = currentQuestion.text,
-                        style = MaterialTheme.typography.bodyLarge.copy(
-                            fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
-                            lineHeight = 20.sp
-                        ),
-                        modifier = Modifier.horizontalScroll(rememberScrollState())
-                    )
+                    QuestionWithTables(text = currentQuestion.text)
                     
                     // Display image if exists
                     if (!currentQuestion.image.isNullOrBlank()) {
