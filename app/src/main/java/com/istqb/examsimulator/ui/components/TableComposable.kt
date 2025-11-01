@@ -110,16 +110,6 @@ fun QuestionWithTables(
 ) {
     val parsedContent = TableParser.parseContent(text)
     
-    // Format text with proper spacing for readability
-    fun formatQuestionText(input: String): String {
-        return input
-            // Split into sentences and add spacing for better readability
-            .replace(". ", ".\n")
-            .replace("? ", "?\n")
-            .replace(": ", ":\n")
-            .trim()
-    }
-    
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(8.dp)
@@ -127,7 +117,7 @@ fun QuestionWithTables(
         if (parsedContent.beforeTable.isNotEmpty()) {
             // No tables, display as normal text
             Text(
-                text = formatQuestionText(parsedContent.beforeTable),
+                text = parsedContent.beforeTable,
                 style = MaterialTheme.typography.bodyMedium,
                 lineHeight = 20.sp
             )
@@ -136,7 +126,7 @@ fun QuestionWithTables(
             parsedContent.textSegments.forEachIndexed { index, textSegment ->
                 if (textSegment.isNotEmpty()) {
                     Text(
-                        text = formatQuestionText(textSegment),
+                        text = textSegment,
                         style = MaterialTheme.typography.bodyMedium,
                         lineHeight = 20.sp
                     )
