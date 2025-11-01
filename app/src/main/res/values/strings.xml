@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ISTQB Sınav Simülatörü</string>
+    <string name="app_name">ISTQB Exam Simulator</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="quick_exam">Quick Exam</string>
+    <string name="practice_mode">Practice Mode</string>
+    <string name="question_sets">Question Sets</string>
+    <string name="total_attempts">Total Attempts</string>
+    <string name="average_success">Average Success</string>
+    <string name="recent_attempts">Recent Attempts</string>
+    
+    <!-- Exam Setup -->
+    <string name="exam_setup_title">Exam Setup</string>
+    <string name="select_question_sets">Select Question Sets</string>
+    <string name="question_count">Question Count</string>
+    <string name="duration_minutes">Duration (Minutes)</string>
+    <string name="pass_threshold">Pass Threshold (%)</string>
+    <string name="shuffle_questions">Shuffle Questions</string>
+    <string name="shuffle_options">Shuffle Options</string>
+    <string name="seed">Seed</string>
+    <string name="start_exam">Start Exam</string>
+    
+    <!-- Exam Screen -->
+    <string name="exam_title">Exam</string>
+    <string name="time_remaining">Time Remaining</string>
+    <string name="question_counter">%1$d / %2$d</string>
+    <string name="flag_question">Flag Question</string>
+    <string name="unflag_question">Unflag Question</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="finish_exam">Finish Exam</string>
+    <string name="confirm_finish_title">Finish Exam?</string>
+    <string name="confirm_finish_message">You have %1$d unanswered questions. Do you want to finish the exam?</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- Result Screen -->
+    <string name="result_title">Exam Result</string>
+    <string name="total_questions">Total Questions</string>
+    <string name="correct">Correct</string>
+    <string name="wrong">Wrong</string>
+    <string name="blank">Blank</string>
+    <string name="success_percentage">Success Percentage</string>
+    <string name="passed">PASSED</string>
+    <string name="failed">FAILED</string>
+    <string name="time_used">Time Used</string>
+    <string name="detailed_review">Detailed Review</string>
+    <string name="back_to_home">Back to Home</string>
+    
+    <!-- Review Screen -->
+    <string name="review_title">Review Questions</string>
+    <string name="your_answer">Your Answer</string>
+    <string name="correct_answer">Correct Answer</string>
+    <string name="not_answered">Not Answered</string>
+    
+    <!-- Question Sets -->
+    <string name="question_sets_title">Question Sets</string>
+    <string name="import_from_file">Import from File</string>
+    <string name="no_question_sets">No question sets yet</string>
+    <string name="import_success">Question set imported successfully</string>
+    <string name="import_error">Failed to import question set: %1$s</string>
+    <string name="questions_count">%1$d questions</string>
+    
+    <!-- Practice Mode -->
+    <string name="practice_mode_title">Practice Mode</string>
+    <string name="unlimited_time">Unlimited Time</string>
+    
+    <!-- General -->
+    <string name="loading">Loading…</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
 </resources>
 

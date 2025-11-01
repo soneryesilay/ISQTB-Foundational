@@ -12,10 +12,8 @@ import kotlinx.coroutines.flow.map
 
 class QuestionRepository(
     private val questionDao: QuestionDao,
-    private val questionSetDao: QuestionSetDao
+    val questionSetDao: QuestionSetDao
 ) {
-    // Expose DAO for ViewModels that need direct access
-    val questionSetDao: QuestionSetDao = questionSetDao
     suspend fun insertQuestions(questions: List<Question>, setSource: String) {
         questions.forEach { question ->
             val questionEntity = QuestionEntity(
@@ -96,6 +94,30 @@ class QuestionRepository(
 
     suspend fun questionExists(questionId: Int, setSource: String): Boolean {
         return questionDao.getQuestionByIdAndSet(questionId, setSource) != null
+    }
+
+    fun getQuestionsBySet(setSource: String): Flow<List<Question>> {
+        return questionDao.getQuestionsBySet(setSource).map { questionEntities ->
+            questionEntities.map { entity ->
+                val options = questionDao.getOptionsForQuestion(entity.id)
+                Question(
+                    id = entity.id,
+                    type = entity.type,
+                    text = entity.text,
+                    options = options.associate { it.key to it.text },
+                    answer = entity.answer,
+                    lo = entity.lo,
+                    kLevel = entity.kLevel,
+                    score = entity.score,
+                    image = entity.image,
+                    setSource = entity.setSource
+                )
+            }
+        }
+    }
+
+    suspend fun deleteQuestion(questionId: String) {
+        questionDao.deleteQuestion(questionId)
     }
 }
 

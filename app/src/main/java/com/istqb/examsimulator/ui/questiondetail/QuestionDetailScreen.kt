@@ -1,0 +1,209 @@
+package com.istqb.examsimulator.ui.questiondetail
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
+import com.istqb.examsimulator.data.model.Question
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun QuestionDetailScreen(
+    viewModel: QuestionDetailViewModel,
+    questionSetId: String,
+    onNavigateBack: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    LaunchedEffect(questionSetId) {
+        viewModel.loadQuestions(questionSetId)
+    }
+
+    val questions = viewModel.questions.collectAsState().value
+    val selectedQuestion = viewModel.selectedQuestion.collectAsState().value
+    var showDeleteDialog by remember { mutableStateOf(false) }
+
+    if (questions.isEmpty()) {
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            CircularProgressIndicator()
+        }
+        return
+    }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Soru Detayları") },
+                navigationIcon = {
+                    IconButton(onClick = onNavigateBack) {
+                        Icon(Icons.Default.ArrowBack, contentDescription = "Geri")
+                    }
+                },
+                actions = {
+                    if (selectedQuestion != null) {
+                        IconButton(onClick = { /* TODO: Implement edit */ }) {
+                            Icon(Icons.Default.Edit, contentDescription = "Düzenle")
+                        }
+                        IconButton(onClick = { showDeleteDialog = true }) {
+                            Icon(Icons.Default.Delete, contentDescription = "Sil")
+                        }
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        LazyColumn(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            itemsIndexed(questions) { index, question ->
+                QuestionDetailCard(
+                    questionNumber = index + 1,
+                    question = question,
+                    isSelected = selectedQuestion?.id == question.id,
+                    onClick = { viewModel.selectQuestion(question) }
+                )
+            }
+        }
+    }
+
+    if (showDeleteDialog && selectedQuestion != null) {
+        AlertDialog(
+            onDismissRequest = { showDeleteDialog = false },
+            title = { Text("Soruyu Sil") },
+            text = { Text("Bu soruyu silmek istediğinizden emin misiniz?") },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        viewModel.deleteQuestion(selectedQuestion.id)
+                        showDeleteDialog = false
+                    }
+                ) {
+                    Text("Sil", color = MaterialTheme.colorScheme.error)
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDeleteDialog = false }) {
+                    Text("İptal")
+                }
+            }
+        )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun QuestionDetailCard(
+    questionNumber: Int,
+    question: Question,
+    isSelected: Boolean,
+    onClick: () -> Unit
+) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = if (isSelected) 8.dp else 2.dp
+        ),
+        colors = CardDefaults.cardColors(
+            containerColor = if (isSelected) {
+                MaterialTheme.colorScheme.primaryContainer
+            } else {
+                MaterialTheme.colorScheme.surface
+            }
+        ),
+        onClick = onClick
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            // Question Number and Text
+            Text(
+                text = "Soru $questionNumber",
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary
+            )
+            
+            Text(
+                text = question.text,
+                style = MaterialTheme.typography.bodyMedium
+            )
+
+            // Image if exists
+            if (!question.image.isNullOrBlank()) {
+                AsyncImage(
+                    model = question.image.replace("asset://", "file:///android_asset/"),
+                    contentDescription = "Soru görseli",
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .heightIn(max = 200.dp)
+                )
+            }
+
+            // Options
+            Text(
+                text = "Şıklar:",
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.Bold
+            )
+
+            question.options.entries.forEachIndexed { index, (key, optionText) ->
+                val isCorrect = question.answer.contains(key)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    val optionLabel = key
+                    
+                    Text(
+                        text = "$optionLabel) ",
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = if (isCorrect) FontWeight.Bold else FontWeight.Normal,
+                        color = if (isCorrect) {
+                            MaterialTheme.colorScheme.primary
+                        } else {
+                            MaterialTheme.colorScheme.onSurface
+                        }
+                    )
+                    
+                    Text(
+                        text = optionText,
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = if (isCorrect) FontWeight.Bold else FontWeight.Normal,
+                        color = if (isCorrect) {
+                            MaterialTheme.colorScheme.primary
+                        } else {
+                            MaterialTheme.colorScheme.onSurface
+                        }
+                    )
+                    
+                    if (isCorrect) {
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Icon(
+                            imageVector = Icons.Default.CheckCircle,
+                            contentDescription = "Doğru cevap",
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
+                }
+            }
+        }
+    }
+}

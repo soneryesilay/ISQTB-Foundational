@@ -7,5 +7,8 @@ data class QuestionSet(
     val lang: String,
     val importTimestamp: Long,
     val questionCount: Int
-)
+) {
+    // Use sourceFileName as unique ID
+    val id: String get() = sourceFileName
+}
 

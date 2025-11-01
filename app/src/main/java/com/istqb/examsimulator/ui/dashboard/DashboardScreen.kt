@@ -181,8 +181,8 @@ fun MiniChart(attempts: List<ExamAttempt>) {
         verticalAlignment = Alignment.Bottom
     ) {
         attempts.forEachIndexed { index, attempt ->
-            val heightRatio = (attempt.successPercent / maxValue).coerceIn(0.0, 1.0)
-            val barHeight = (chartHeight * heightRatio).value.dp
+            val heightRatio = (attempt.successPercent / maxValue).coerceIn(0.0, 1.0).toFloat()
+            val barHeight = chartHeight * heightRatio
 
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,

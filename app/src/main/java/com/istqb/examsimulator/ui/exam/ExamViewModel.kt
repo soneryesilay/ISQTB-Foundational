@@ -132,7 +132,7 @@ class ExamViewModel(
     fun selectAnswer(option: String, isSelected: Boolean) {
         val current = _examState.value
         val question = current.questions.getOrNull(current.currentQuestionIndex) ?: return
-        val currentAnswer = current.answers[question.id] ?: Answer(question.id)
+        val currentAnswer = current.answers[question.id] ?: Answer(question.id, emptyList())
 
         val newSelected = if (question.type == "multiple") {
             if (isSelected) {
@@ -197,7 +197,7 @@ class ExamViewModel(
         )
 
         val timeUsed = current.config?.durationMinutes?.let { duration ->
-            val elapsed = duration - (current.timeRemainingSeconds / 60)
+            val elapsed = duration - (current.timeRemainingSeconds / 60).toInt()
             elapsed.coerceAtLeast(0)
         } ?: 0
 
@@ -219,7 +219,7 @@ class ExamViewModel(
             )
 
             val answersList = current.questions.map { question ->
-                val answer = current.answers[question.id] ?: Answer(question.id)
+                val answer = current.answers[question.id] ?: Answer(question.id, emptyList())
                 answer.copy(isFlagged = current.flaggedQuestions.contains(question.id))
             }
 

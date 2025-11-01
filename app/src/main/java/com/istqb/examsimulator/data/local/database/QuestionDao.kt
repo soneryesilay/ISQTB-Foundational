@@ -1,9 +1,11 @@
 package com.istqb.examsimulator.data.local.database
 
 import androidx.room.Dao
+import androidx.room.Embedded
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Relation
 import androidx.room.Transaction
 import com.istqb.examsimulator.data.local.entities.QuestionEntity
 import com.istqb.examsimulator.data.local.entities.OptionEntity
@@ -35,10 +37,20 @@ interface QuestionDao {
 
     @Query("SELECT * FROM questions WHERE id = :questionId AND setSource = :setSource")
     suspend fun getQuestionByIdAndSet(questionId: Int, setSource: String): QuestionEntity?
+
+    @Query("SELECT * FROM questions WHERE setSource = :setSource")
+    fun getQuestionsBySet(setSource: String): Flow<List<QuestionEntity>>
+
+    @Query("DELETE FROM questions WHERE id = :questionId")
+    suspend fun deleteQuestion(questionId: String)
 }
 
 data class QuestionWithOptions(
-    val question: QuestionEntity,
+    @Embedded val question: QuestionEntity,
+    @Relation(
+        parentColumn = "id",
+        entityColumn = "questionId"
+    )
     val options: List<OptionEntity>
 )
 

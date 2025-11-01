@@ -94,9 +94,9 @@ fun ExamScreen(
                     }
                     IconButton(onClick = { viewModel.toggleFlag() }) {
                         Icon(
-                            imageVector = if (isFlagged) Icons.Default.Flag else Icons.Default.FlagBorder,
+                            imageVector = if (isFlagged) Icons.Default.Flag else Icons.Default.Flag,
                             contentDescription = "İşaretle",
-                            tint = if (isFlagged) Color(0xFFFF6F00) else MaterialTheme.colorScheme.onSurface
+                            tint = if (isFlagged) Color(0xFFFF6F00) else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
                         )
                     }
                     IconButton(onClick = { showGridNavigator = true }) {

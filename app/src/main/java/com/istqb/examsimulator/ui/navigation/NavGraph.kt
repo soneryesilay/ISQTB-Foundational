@@ -8,6 +8,8 @@ import com.istqb.examsimulator.ui.dashboard.DashboardScreen
 import com.istqb.examsimulator.ui.dashboard.DashboardViewModel
 import com.istqb.examsimulator.ui.exam.ExamScreen
 import com.istqb.examsimulator.ui.exam.ExamViewModel
+import com.istqb.examsimulator.ui.questiondetail.QuestionDetailScreen
+import com.istqb.examsimulator.ui.questiondetail.QuestionDetailViewModel
 import com.istqb.examsimulator.ui.questionsets.QuestionSetListScreen
 import com.istqb.examsimulator.ui.questionsets.QuestionSetViewModel
 import com.istqb.examsimulator.ui.result.ResultScreen
@@ -34,6 +36,10 @@ sealed class Screen(val route: String) {
         val routeWithArgs = "$route/{$ARG_ATTEMPT_ID}"
     }
     object QuestionSets : Screen("question_sets")
+    object QuestionDetail : Screen("question_detail") {
+        const val ARG_SET_ID = "setId"
+        val routeWithArgs = "$route/{$ARG_SET_ID}"
+    }
 }
 
 @Composable
@@ -44,7 +50,8 @@ fun AppNavHost(
     examViewModel: ExamViewModel,
     resultViewModel: ResultViewModel,
     reviewViewModel: ReviewViewModel,
-    questionSetViewModel: QuestionSetViewModel
+    questionSetViewModel: QuestionSetViewModel,
+    questionDetailViewModel: QuestionDetailViewModel
 ) {
     NavHost(
         navController = navController,
@@ -141,6 +148,20 @@ fun AppNavHost(
         composable(Screen.QuestionSets.route) {
             QuestionSetListScreen(
                 viewModel = questionSetViewModel,
+                onNavigateBack = {
+                    navController.popBackStack()
+                },
+                onQuestionSetClick = { setId ->
+                    navController.navigate("${Screen.QuestionDetail.route}/$setId")
+                }
+            )
+        }
+
+        composable(Screen.QuestionDetail.routeWithArgs) { backStackEntry ->
+            val setId = backStackEntry.arguments?.getString(Screen.QuestionDetail.ARG_SET_ID) ?: return@composable
+            QuestionDetailScreen(
+                viewModel = questionDetailViewModel,
+                questionSetId = setId,
                 onNavigateBack = {
                     navController.popBackStack()
                 }

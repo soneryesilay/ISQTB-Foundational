@@ -3,12 +3,15 @@ package com.istqb.examsimulator.ui.setup
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,6 +33,8 @@ fun ExamSetupScreen(
     val isLoading = viewModel.isLoading.collectAsState().value
     val error = viewModel.error.collectAsState().value
 
+    val scope = rememberCoroutineScope()
+    
     var totalQuestionsText by remember { mutableStateOf(TextFieldValue(totalQuestions.toString())) }
     var durationText by remember { mutableStateOf(TextFieldValue(durationMinutes.toString())) }
     var passPercentText by remember { mutableStateOf(TextFieldValue(passPercent.toString())) }
@@ -66,7 +71,7 @@ fun ExamSetupScreen(
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(
-                            imageVector = androidx.compose.material.icons.Icons.Default.ArrowBack,
+                            imageVector = Icons.Default.ArrowBack,
                             contentDescription = "Geri"
                         )
                     }
@@ -225,7 +230,7 @@ fun ExamSetupScreen(
             item {
                 Button(
                     onClick = {
-                        kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.Dispatchers.Main).launch {
+                        scope.launch {
                             viewModel.startExam(isPracticeMode)?.let { (attemptId, config) ->
                                 com.istqb.examsimulator.util.ExamConfigStore.saveConfig(attemptId, config)
                                 onNavigateToExam(attemptId)

@@ -24,6 +24,7 @@ import java.util.*
 fun QuestionSetListScreen(
     viewModel: QuestionSetViewModel,
     onNavigateBack: () -> Unit,
+    onQuestionSetClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val questionSets = viewModel.questionSets.collectAsState().value
@@ -101,7 +102,10 @@ fun QuestionSetListScreen(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 items(questionSets) { set ->
-                    QuestionSetCard(set)
+                    QuestionSetCard(
+                        set = set,
+                        onClick = { onQuestionSetClick(set.id) }
+                    )
                 }
             }
         }
@@ -118,13 +122,18 @@ fun QuestionSetListScreen(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun QuestionSetCard(set: com.istqb.examsimulator.data.model.QuestionSet) {
+fun QuestionSetCard(
+    set: com.istqb.examsimulator.data.model.QuestionSet,
+    onClick: () -> Unit
+) {
     val dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.getDefault())
     
     Card(
         modifier = Modifier.fillMaxWidth(),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        onClick = onClick
     ) {
         Column(
             modifier = Modifier
