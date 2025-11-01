@@ -162,7 +162,9 @@ fun QuestionWithTables(
     val parsedContent = TableParser.parseContent(text)
     
     Column(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 4.dp), // Add horizontal padding for small screens
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         if (parsedContent.beforeTable.isNotEmpty()) {
@@ -170,7 +172,8 @@ fun QuestionWithTables(
             Text(
                 text = formatQuestionText(parsedContent.beforeTable),
                 style = MaterialTheme.typography.bodyMedium,
-                lineHeight = 24.sp
+                lineHeight = 24.sp,
+                modifier = Modifier.fillMaxWidth()
             )
         } else {
             // Has tables - display formatted text segments and tables
@@ -179,14 +182,18 @@ fun QuestionWithTables(
                     Text(
                         text = formatQuestionText(textSegment),
                         style = MaterialTheme.typography.bodyMedium,
-                        lineHeight = 24.sp
+                        lineHeight = 24.sp,
+                        modifier = Modifier.fillMaxWidth()
                     )
                 }
                 
                 // Display table after this text segment (if exists)
                 if (index < parsedContent.tables.size) {
                     Spacer(modifier = Modifier.height(4.dp))
-                    ResponsiveTable(tableData = parsedContent.tables[index])
+                    ResponsiveTable(
+                        tableData = parsedContent.tables[index],
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
         }

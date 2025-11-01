@@ -19,7 +19,9 @@
         "c": "Statik analiz, müşterilere hiçbir çıktı sağlamayan sistem unsurlarının piyasaya sürülmeye uygun olduğuna dair kanıt sağlar.",
         "d": "İncelemeler gereksinim spesifikasyonlarının kalitesini artırır ve elde edilen çalışma ürünlerinde daha az değişikliğe ihtiyaç duyulmasını sağlar."
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 2,
@@ -34,7 +36,9 @@
         "c": "Test, kalite kontrolünün bir diğer adıdır.",
         "d": "Testler, kalite güvencesinin bir parçası olarak gerçekleştirilir."
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 3,
@@ -49,7 +53,9 @@
         "c": "İncelemeler ve diğer statik test yaklaşımları ile testlere mümkün olduğunca erken başlanması",
         "d": "Test senaryoların oluşturulması için denklik paylarına ayırma ve sınır değer analizinin kullanılması"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 4,
@@ -57,14 +63,16 @@
       "score": 1,
       "lo": "FL-1.4.1",
       "kLevel": "K2",
-      "text": "Hangi test aktivitesi, test verisi gereksinimleri, test koşulları, test ortamı gereksinimleri ve test senaryoları ile çalışmayı içerir?",
+      "text": "Aşağıdakilerden hangi test aktivitesi, test verisi gereksinimleri, test koşulları, test ortamı gereksinimleri ve test senaryoları ile çalışmayı içerir?",
       "options": {
         "a": "Test tasarımı",
         "b": "Test koşumu",
         "c": "Test analizi",
         "d": "Test uyarlaması"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 5,
@@ -79,7 +87,9 @@
         "c": "Test ekibi üyelerinin kaç yıllık deneyime sahip olduğu",
         "d": "Ticari bir müzik dinleme uygulaması için son kullanıcının organizasyon yapısı"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 6,
@@ -94,7 +104,9 @@
         "c": "Test uzmanları ve başarısız test senaryoları arasındaki izlenebilirlik, test uzmanlarının beceri düzeyinin belirlenebilmesini sağlar.",
         "d": "Belirlenen riskler ve yazılı test koşulları arasındaki izlenebilirlik, hangi risklerin test edilmeye değer olduğunun belirlenebilmesini sağlar."
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 7,
@@ -109,7 +121,9 @@
         "c": "Test uzmanının önceden programcı olarak çalışması sebebiyle bu alandaki becerilerinin yardımıyla iş analistleriyle daha iyi iletişim kurması",
         "d": "Test uzmanının, keşif testi oturumuna başlamadan önce test senaryolarını metodik olarak oluştururken hata yapmamaya çok dikkat etmesi"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 8,
@@ -117,14 +131,16 @@
       "score": 1,
       "lo": "FL-1.5.2",
       "kLevel": "K1",
-      "text": "Tüm ekip yaklaşımının avantajlarından biri hangisidir?",
+      "text": "Aşağıdakilerden hangisi tüm ekip yaklaşımının avantajlarından biridir?",
       "options": {
         "a": "Ekip üyelerinin herhangi bir zamanda herhangi bir rolü üstlenmesine olanak tanır.",
         "b": "Tüm geliştirme projesini desteklemek için yalnızca tek bir ekibe ihtiyaç duyar.",
         "c": "İş temsilcilerini geliştiricilerle aynı ekibe dahil eder.",
         "d": "Tüm projeye fayda sağlayan bir ekip sinerjisi oluşturur."
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 9,
@@ -139,7 +155,9 @@
         "c": "Yinelemeli bir yazılım geliştirme modeli kullanılıyorsa, bileşen testleri genellikle geliştiriciler tarafından manuel olarak gerçekleştirilir.",
         "d": "Artımlı bir yazılım geliştirme modeli kullanılıyorsa, statik testler erken aşamalarda, dinamik testler ise sonraki aşamalarda yapılır."
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 10,
@@ -154,7 +172,9 @@
         "c": "Test uzmanları, çalışma ürünlerini test analizi ve tasarımına başlamadan önce gözden geçirmelidir.",
         "d": "Test uzmanları çalışma ürünlerini yayınlandıktan hemen sonra gözden geçirmelidir."
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 11,
@@ -169,7 +189,9 @@
         "c": "Kalite Güdümlü Geliştirme",
         "d": "Özellik Güdümlü Geliştirme"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 12,
@@ -184,7 +206,9 @@
         "c": "Test uzmanları, geliştiricilere ve operatörlere eşit davranmak amacıyla, shift-right yaklaşımını kullanarak, operatörler tarafından gerçekleştirilen sürüm testine daha fazla efor harcayacaktır.",
         "d": "Test uzmanları, geliştiriciler ve operatörler arasında daha fazla sinerji yaratmak için testler, manuel test olmadan tamamen otomatize hale getirilmelidir."
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 13,
@@ -199,7 +223,9 @@
         "c": "Eğitim yazılımı geliştiricileri tarafından bir uzaktan eğitim sisteminin beta testi",
         "d": "Bir insan kaynakları sisteminin kullanıcı arayüzü ve veri tabanı arasındaki etkileşimlerin test edilmesi"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 14,
@@ -214,7 +240,9 @@
         "c": "Regresyon testi, operasyonel ortamın değişmeden kaldığını kontrol etmekle ilgiliyken, onaylama testi test nesnesindeki değişiklikleri test etmekle ilgilidir.",
         "d": "Regresyon testi değişmeyen koddaki olumsuz etkilerle ilgilenirken, onaylama testi değişen kodun test edilmesiyle ilgilenir."
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 15,
@@ -229,7 +257,9 @@
         "c": "Beklenen kullanıcıların çoğu için zayıf yanıt süreleri",
         "d": "Kodda uygulanmayan gerekli özellikler"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 16,
@@ -244,7 +274,9 @@
         "c": "Potansiyel kalite sorunlarının erken iletişimini kolaylaştırır.",
         "d": "Son kullanıcılar çalışma ürününün tesliminin neden geciktiğini daha iyi anlar."
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 17,
@@ -252,14 +284,16 @@
       "score": 1,
       "lo": "FL-3.2.2",
       "kLevel": "K2",
-      "text": "Aşağıdaki verilen görev tanımları, hangi gözden geçirme faaliyetleriyle EN İYİ eşleşir? 1. Değerlendirilecek kalite özellikleri ve çıkış kriterleri seçilir. 2. Herkesin çalışma ürünlerine erişimi vardır. 3. Çalışma ürünlerinde anormallikler tespit edilir. 4. Anomaliler tartışılır. A. Bireysel gözden geçirme, B. Gözden geçirmeyi başlatma, C. Planlama, D. İletişim ve analiz",
+      "text": "Aşağıdaki verilen görev tanımları, hangi gözden geçirme faaliyetleriyle EN İYİ eşleşir?\n1. Değerlendirilecek kalite özellikleri ve çıkış kriterleri seçilir.\n2. Herkesin çalışma ürünlerine erişimi vardır.\n3. Çalışma ürünlerinde anormallikler tespit edilir.\n4. Anomaliler tartışılır.\nA. Bireysel gözden geçirme\nB. Gözden geçirmeyi başlatma\nC. Planlama\nD. İletişim ve analiz",
       "options": {
         "a": "1B, 2C, 3D, 4A",
         "b": "1B, 2D, 3C, 4A",
         "c": "1C, 2A, 3B, 4D",
         "d": "1C, 2B, 3A, 4D"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 18,
@@ -267,14 +301,16 @@
       "score": 1,
       "lo": "FL-3.2.3",
       "kLevel": "K1",
-      "text": "Aşağıda verilen görev tanımları, hangi rol ve sorumluluklarla EN İYİ şekilde eşleşir? 1. Katip (Scribe), 2. Gözden geçirme lideri, 3. Kolaylaştırıcı, 4. Yönetici. A. Gözden geçirme toplantılarının etkin bir şekilde yürütülmesini ve güvenli bir gözden geçirme ortamının oluşturulmasını sağlar. B. Gözden geçirme toplantısı sırasında bulunan kararlar ve yeni anomaliler gibi inceleme bilgilerini kaydeder. C. Neyin gözden geçirileceğine karar verir ve gözden geçirme için personel ve zaman gibi kaynakları sağlar. D. Gözden geçirmenin ne zaman ve nerede yapılacağını organize etmek gibi gözden geçirmenin genel sorumluluğunu üstlenir.",
+      "text": "Aşağıda verilen görev tanımları, hangi rol ve sorumluluklarla EN İYİ şekilde eşleşir?\n1. Katip (Scribe)\n2. Gözden geçirme lideri\n3. Kolaylaştırıcı\n4. Yönetici\nA. Gözden geçirme toplantılarının etkin bir şekilde yürütülmesini ve güvenli bir gözden geçirme ortamının oluşturulmasını sağlar.\nB. Gözden geçirme toplantısı sırasında bulunan kararlar ve yeni anomaliler gibi inceleme bilgilerini kaydeder.\nC. Neyin gözden geçirileceğine karar verir ve gözden geçirme için personel ve zaman gibi kaynakları sağlar.\nD. Gözden geçirmenin ne zaman ve nerede yapılacağını organize etmek gibi gözden geçirmenin genel sorumluluğunu üstlenir.",
       "options": {
         "a": "1A, 2B, 3D, 4C",
         "b": "1A, 2C, 3B, 4D",
         "c": "1B, 2D, 3A, 4C",
         "d": "1B, 2D, 3C, 4A"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 19,
@@ -289,7 +325,9 @@
         "c": "Karar tablosu testinde, test senaryoları test nesnesinin kontrol akışı bilgisinden türetilir. Dal testinde, test senaryoları iş mantığını tanımlayan spesifikasyondan türetilir.",
         "d": "Karar tablosu testinde, test senaryoları yazılımın nasıl uygulandığından bağımsızdır. Dal testinde, test senaryoları ancak kodun tasarımından veya uygulanmasından sonra oluşturulabilir."
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 20,
@@ -304,7 +342,9 @@
         "c": "1, 10, 50",
         "d": "10, 29, 30, 31"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 21,
@@ -319,7 +359,9 @@
         "c": "1, 5, 13",
         "d": "1, 4, 7, 11, 14"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 22,
@@ -327,14 +369,16 @@
       "score": 1,
       "lo": "FL-4.2.3",
       "kLevel": "K3",
-      "text": "Aşağıdaki karar tablosu ateroskleroz riskini belirlemeye yönelik kuralları içermektedir.\n\n┌──────────────────────┬──────────┬──────────┬────────────┬────────────┬──────────┐\n│                      │ Kural 1  │ Kural 2  │ Kural 3    │ Kural 4    │ Kural 5  │\n├──────────────────────┼──────────┼──────────┼────────────┼────────────┼──────────┤\n│ Koşullar             │          │          │            │            │          │\n├──────────────────────┼──────────┼──────────┼────────────┼────────────┼──────────┤\n│ Kolesterol (mg/dl)   │ ≤124     │ ≤124     │ 125 – 200  │ 125 – 200  │ ≥ 201    │\n│ Kan basıncı (mm Hg)  │ ≤140     │ > 140    │ ≤140       │ > 140      │ —        │\n├──────────────────────┼──────────┼──────────┼────────────┼────────────┼──────────┤\n│ Aksiyon              │          │          │            │            │          │\n├──────────────────────┼──────────┼──────────┼────────────┼────────────┼──────────┤\n│ Risk seviyesi        │ çok düşük│ düşük    │ orta       │ yüksek     │ çok yüksek│\n└──────────────────────┴──────────┴──────────┴────────────┴────────────┴──────────┘\n\nTest senaryolarını aşağıdaki test girdi verileri ile tasarladınız:\n\nTC1:  Kolesterol = 125 mg/dl    Kan basıncı = 141 mm Hg\nTC2:  Kolesterol = 200 mg/dl    Kan basıncı = 201 mm Hg\nTC3:  Kolesterol = 124 mg/dl    Kan basıncı = 201 mm Hg\nTC4:  Kolesterol = 109 mg/dl    Kan basıncı = 200 mm Hg\nTC5:  Kolesterol = 201 mg/dl    Kan basıncı = 140 mm Hg\n\nBu test senaryoları tarafından elde edilen karar tablosu kapsamı nedir? (1 puan – 1 seçenek seçin)",
+      "text": "Aşağıdaki karar tablosu ateroskleroz riskini belirlemeye yönelik kuralları içermektedir.\nKoşullar:\nKural 1: Kolesterol ≤124 mg/dl, Kan basıncı ≤140 mm Hg\nKural 2: Kolesterol ≤124 mg/dl, Kan basıncı >140 mm Hg\nKural 3: Kolesterol 125–200 mg/dl, Kan basıncı ≤140 mm Hg\nKural 4: Kolesterol 125–200 mg/dl, Kan basıncı >140 mm Hg\nKural 5: Kolesterol ≥201 mg/dl\nAksiyonlar:\nRisk seviyesi: çok düşük, düşük, orta, yüksek\nTest senaryolarını aşağıdaki test girdi verileri ile tasarladınız:\nTC1: Kolesterol = 125 mg/dl, Kan basıncı = 141 mm Hg\nTC2: Kolesterol = 200 mg/dl, Kan basıncı = 201 mm Hg\nTC3: Kolesterol = 124 mg/dl, Kan basıncı = 201 mm Hg\nTC4: Kolesterol = 109 mg/dl, Kan basıncı = 200 mm Hg\nTC5: Kolesterol = 201 mg/dl, Kan basıncı = 140 mm Hg\nBu test senaryoları tarafından elde edilen karar tablosu kapsamı nedir?",
       "options": {
         "a": "40%",
         "b": "60%",
         "c": "80%",
         "d": "100%"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 23,
@@ -349,7 +393,9 @@
         "c": "Ekle, Ekle, Ekle, Kaldır, Kaldır",
         "d": "Ekle, Ekle, Ekle, Kaldır, Ekle"
       },
-      "answer": ["c"],
+      "answer": [
+        "c"
+      ],
       "image": "asset://state_diagram_question23_b.png"
     },
     {
@@ -365,7 +411,9 @@
         "c": "Test edilen koddaki komutların en az %5'i çalıştırılamaz.",
         "d": "T1 ve T2 testlerinden oluşan test grubu tam dal kapsamına ulaşır."
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 25,
@@ -380,7 +428,9 @@
         "c": "X = test senaryoları tarafından uygulanan dal sayısı, Y = koddaki toplam dal sayısı",
         "d": "X = test senaryoları tarafından uygulanan koşullu dal sayısı, Y = koddaki toplam karar sonucu sayısı"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 26,
@@ -388,7 +438,7 @@
       "score": 1,
       "lo": "FL-4.4.2",
       "kLevel": "K2",
-      "text": "Keşif testlerini kullanmak için aşağıdaki ifadelerden hangi İKİ'si EN İYİ gerekçeleri sağlar?",
+      "text": "Keşif testlerini kullanmak için aşağıdaki ifadelerden hangi İKİ'si EN İYİ gerekçeleri sağlar?\ne) Test uzmanları iş alanında deneyimlidir ve iyi analitik becerilere sahiptir.",
       "options": {
         "a": "Test uzmanlarına test tasarımı ve testin yürütülmesi için yeterli zaman ayrılmamıştır.",
         "b": "Mevcut test stratejisi, test uzmanlarının resmi, kara kutu test tekniklerini kullanmasını gerektirir.",
@@ -396,7 +446,10 @@
         "d": "Test uzmanları çevik bir ekibin üyeleridir ve iyi programlama becerilerine sahiptir.",
         "e": "Test uzmanları iş alanında deneyimlidir ve iyi analitik becerilere sahiptir."
       },
-      "answer": ["a", "e"]
+      "answer": [
+        "a",
+        "e"
+      ]
     },
     {
       "id": 27,
@@ -411,7 +464,9 @@
         "c": "\"Program fonksiyonel ve fonksiyonel olmayan gereksinimler açısından doğru çalışıyor\"",
         "d": "\"Hata mesajları kullanıcının anlayabileceği bir dilde yazılmıştır\""
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 28,
@@ -426,7 +481,9 @@
         "c": "Ürün odaklı",
         "d": "Süreç odaklı"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 29,
@@ -441,7 +498,9 @@
         "c": "Girdi: müşteri sipariş geçmişi ekranında \"Artan şekilde sırala\" butonuna tıklar. Beklenen çıktı: sistem sipariş geçmişini sipariş numarasına göre artan sırada sıralanmış olarak gösterir.",
         "d": "Girdi: kayıtlı olmayan bir müşteri, müşteri veri tabanında önceden bulunmayan geçerli bir e-posta adresiyle yeni bir müşteri olarak kaydolur. Beklenen çıktı: sistem kaydı kabul eder ve hesabı oluşturur."
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 30,
@@ -456,7 +515,9 @@
         "c": "Bileşen testleri derlenir ve koşulmaya hazırlanır.",
         "d": "Komut kapsamı en az %80'dir."
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 31,
@@ -464,14 +525,16 @@
       "score": 1,
       "lo": "FL-5.1.4",
       "kLevel": "K3",
-      "text": "Yeni bir proje için oranlara dayalı tahmin kullanarak test eforunu tahmin ettiğinizi varsayın. Yeni projeye benzer dört geçmiş projeden hem geliştirme eforu hem de test eforu için ortalama verileri kullanarak test-geliştirme eforu oranını hesaplıyorsunuz.\n\nTabloda bu geçmiş veriler gösterilmektedir:\n\n┌───────┬─────────────────────┬──────────────────┐\n│ Proje │ Geliştirme eforu ($)│ Test eforu ($)   │\n├───────┼─────────────────────┼──────────────────┤\n│  P1   │      800,000        │     40,000       │\n│  P2   │    1,200,000        │    130,000       │\n│  P3   │      600,000        │     70,000       │\n│  P4   │    1,000,000        │    120,000       │\n└───────┴─────────────────────┴──────────────────┘\n\nYeni proje için tahmini geliştirme eforu 800.000 $ ise, bu projedeki test çalışmaları için efor tahmininiz aşağıdakilerden hangisidir? (1 puan – 1 seçenek seçin)",
+      "text": "Yeni bir proje için oranlara dayalı tahmin kullanarak test eforunu tahmin ettiğinizi varsayın. Yeni projeye benzer dört geçmiş projeden hem geliştirme eforu hem de test eforu için ortalama verileri kullanarak test-geliştirme eforu oranını hesaplıyorsunuz. Tabloda bu geçmiş veriler gösterilmektedir.\nProje: P1 - Geliştirme eforu: $800,000, Test eforu: $40,000\nProje: P2 - Geliştirme eforu: $1,200,000, Test eforu: $130,000\nProje: P3 - Geliştirme eforu: $600,000, Test eforu: $70,000\nProje: P4 - Geliştirme eforu: $1,000,000, Test eforu: $120,000\nYeni proje için tahmini geliştirme eforu 800.000 $ ise, bu projedeki test çalışmaları için efor tahmininiz aşağıdakilerden hangisidir?",
       "options": {
         "a": "$40,000",
         "b": "$80,000",
         "c": "$81,250",
         "d": "$82,500"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 32,
@@ -479,14 +542,16 @@
       "score": 1,
       "lo": "FL-5.1.5",
       "kLevel": "K3",
-      "text": "Kullanıcıların ürün ARAmasına, ürün ayrıntılarını GÖRÜNTÜLEmesine, ürünleri bir alışveriş sepetine EKLEmesine ve SİPARİŞ VERMEsine olanak tanıyan bir web uygulamasını test ettiğinizi varsayın.\n\nAşağıdaki yedi test senaryosunu hazırladınız ve bunların tümünü koşmak istiyorsunuz. Testler, test önceliğine göre en iyi sırada koşulmalıdır.\n\n┌──────┬────────────────────────────────────────┬──────────────────────────────┐\n│ Test │ Test koşulu                            │ Öncelik (1 = daha yüksek     │\n│      │                                        │           öncelik)           │\n├──────┼────────────────────────────────────────┼──────────────────────────────┤\n│ TC1  │ A ürününü ARA                          │ 4                            │\n│ TC2  │ B ürününü ARA                          │ 4                            │\n│ TC3  │ Ürün A ayrıntılarını GÖRÜNTÜLE         │ 3                            │\n│ TC4  │ Ürün B ayrıntılarını GÖRÜNTÜLE         │ 2                            │\n│ TC5  │ A ürününü alışveriş sepetine EKLE      │ 3                            │\n│ TC6  │ B ürününü alışveriş sepetine EKLE      │ 1                            │\n│ TC7  │ SİPARİŞ VER                            │ 5                            │\n└──────┴────────────────────────────────────────┴──────────────────────────────┘\n\nAyrıca test senaryoları arasında aşağıdaki mantıksal bağlılıkları da belirlediniz:\n\n• GÖRÜNTÜLE fonksiyonu test edilmeden önce ARA fonksiyonu test edilmelidir.\n• GÖRÜNTÜLE fonksiyonu EKLE fonksiyonundan önce test edilmelidir.\n• EKLE fonksiyonu SİPARİŞ fonksiyonundan önce test edilmelidir.\n\nBu durumda, dördüncü olarak hangi test senaryosu koşulmalıdır? (1 puan – 1 seçenek seçin)",
+      "text": "Kullanıcıların ürün ARAmasına, ürün ayrıntılarını GÖRÜNTÜLEmesine, ürünleri bir alışveriş sepetine EKLEmesine ve SİPARİŞ VERMEsine olanak tanıyan bir web uygulamasını test ettiğinizi varsayın. Aşağıdaki yedi test senaryosunu hazırladınız ve bunların tümünü koşmak istiyorsunuz. Testler, test önceliğine göre en iyi sırada koşulmalıdır.\nTest senaryosu: TC1 - A ürününü ARA, Öncelik: 4\nTest senaryosu: TC2 - B ürününü ARA, Öncelik: 4\nTest senaryosu: TC3 - Ürün A ayrıntılarını GÖRÜNTÜLE, Öncelik: 3\nTest senaryosu: TC4 - Ürün B ayrıntılarını GÖRÜNTÜLE, Öncelik: 2\nTest senaryosu: TC5 - A ürününü alışveriş sepetine EKLE, Öncelik: 3\nTest senaryosu: TC6 - B ürününü alışveriş sepetine EKLE, Öncelik: 1\nTest senaryosu: TC7 - SİPARİŞ VER, Öncelik: 5\nAyrıca test senaryoları arasında aşağıdaki mantıksal bağlılıkları da belirlediniz:\n• GÖRÜNTÜLE fonksiyonu test edilmeden önce ARA fonksiyonu test edilmelidir.\n• GÖRÜNTÜLE fonksiyonu EKLE fonksiyonundan önce test edilmelidir.\n• EKLE fonksiyonu SİPARİŞ fonksiyonundan önce test edilmelidir.\nBu durumda, dördüncü olarak hangi test senaryosu koşulmalıdır?",
       "options": {
         "a": "TC3",
         "b": "TC1",
         "c": "TC7",
         "d": "TC2"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 33,
@@ -501,7 +566,9 @@
         "c": "Kullanıcı kabul testi",
         "d": "Bileşen entegrasyon testi"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 34,
@@ -509,14 +576,16 @@
       "score": 1,
       "lo": "FL-5.2.4",
       "kLevel": "K2",
-      "text": "Aşağıdaki riskler hangi azaltma faaliyetleriyle EN İYİ şekilde eşleştirilir? 1. Etkin olmayan döngü uygulamasının uzun sistem yanıtlarına neden olması, 2. Tüketicilerin tercihlerini değiştirmesi, 3. Sunucu odasını su basması, 4. Belirli bir yaşın üzerindeki hastaların hatalı raporlar alması. A. Risk kabulü, B. Performans testi, C. Test tekniği olarak sınır değer analizinin kullanılması, D. Risk transferi",
+      "text": "Aşağıdaki riskler hangi azaltma faaliyetleriyle EN İYİ şekilde eşleştirilir?\n1. Etkin olmayan döngü uygulamasının uzun sistem yanıtlarına neden olması\n2. Tüketicilerin tercihlerini değiştirmesi\n3. Sunucu odasını su basması\n4. Belirli bir yaşın üzerindeki hastaların hatalı raporlar alması\nA. Risk kabulü\nB. Performans testi\nC. Test tekniği olarak sınır değer analizinin kullanılması\nD. Risk transferi",
       "options": {
         "a": "1C, 2D, 3A, 4B",
         "b": "1B, 2D, 3A, 4C",
         "c": "1B, 2A, 3D, 4C",
         "d": "1C, 2A, 3D, 4B"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 35,
@@ -531,7 +600,9 @@
         "c": "Gereksinim kapsamı",
         "d": "Hata tespit yüzdesi"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 36,
@@ -546,7 +617,9 @@
         "c": "E-posta",
         "d": "Video konferans"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 37,
@@ -561,7 +634,9 @@
         "c": "Bir yazılım lisansının satın alındığı tarihle ilgili verilere sahip olan yapılandırma yönetimi aracı, ürün lisansının sona ermekte olduğu hakkında otomatik olarak bilgi üretir.",
         "d": "Test senaryosunun sürüm numarasına sahip olan yapılandırma yönetimi aracı, bu test senaryosu için otomatik olarak test verileri oluşturabilir."
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 38,
@@ -569,7 +644,7 @@
       "score": 1,
       "lo": "FL-5.5.1",
       "kLevel": "K3",
-      "text": "Girdi olarak bir dizi sayı alan ve aynı sayı kümesini artan sırada sıralanmış olarak döndüren bir sıralama işlevini test ettiğinizi varsayın. Test koşum günlüğü aşağıdaki gibi görünmektedir. Ortam yapılandırması: sort function build 2.002.2182, test case set: TCS-3, # of TCs: 5. Test run ID: 736. Başlangıç zamanı: 12:43:21.003. TC1: Girdi: 3. Çıktı: 3. Sonuç: passed. TC2: Girdi: 3 11 6 5. Çıktı: 3 5 6 11. Sonuç: passed. TC3: Girdi: 8 7 3 7 1. Çıktı: 1 3 7 8. Sonuç: failed. TC4: Girdi: -2 -2 -2 -3 -3. Çıktı: -3 -2. Sonuç: failed. TC5: Girdi: 0 -2 0 3 4 4. Çıktı: -2 0 3 4. Sonuç: failed. Bitiş zamanı: 12:43:21.005. Toplam test döngüsü süresi: 0:00:00.002. Aşağıdakilerden hangisi bir hata raporunda kullanılabilecek EN İYİ hata tanımını sağlar?",
+      "text": "Girdi olarak bir dizi sayı alan ve aynı sayı kümesini artan sırada sıralanmış olarak döndüren bir sıralama işlevini test ettiğinizi varsayın. Test koşum günlüğü aşağıdaki gibi görünmektedir. Aşağıdakilerden hangisi bir hata raporunda kullanılabilecek EN İYİ hata tanımını sağlar?",
       "image": "asset://test_log_question38_b.png",
       "options": {
         "a": "Sistem birkaç sayı kümesini sıralayamıyor. Referans: TC3, TC4, TC5.",
@@ -577,7 +652,9 @@
         "c": "Sistem negatif sayıları sıralayamıyor. Referans: TC4, TC5.",
         "d": "TC3, TC4 ve TC5'te hatalar (yinelenen giriş verileri) vardır ve düzeltilmelidir."
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 39,
@@ -585,14 +662,16 @@
       "score": 1,
       "lo": "FL-6.1.1",
       "kLevel": "K2",
-      "text": "Aşağıdaki açıklamalar hangi test aracı kategorileri ile EN İYİ eşleşir? 1. İş akışı takibinin desteklenmesi, 2. İletişimin kolaylaştırılması, 3. Sanal makineler, 4. Destek gözden geçirmeleri. A. Statik test araçları, B. Ölçeklenebilirliği ve dağıtım standardizasyonunu destekleyen araçlar, C. DevOps araçları, D. İş birliği araçları",
+      "text": "Aşağıdaki açıklamalar hangi test aracı kategorileri ile EN İYİ eşleşir?\n1. İş akışı takibinin desteklenmesi\n2. İletişimin kolaylaştırılması\n3. Sanal makineler\n4. Destek gözden geçirmeleri\nA. Statik test araçları\nB. Ölçeklenebilirliği ve dağıtım standardizasyonunu destekleyen araçlar\nC. DevOps araçları\nD. İş birliği araçları",
       "options": {
         "a": "1A, 2B, 3C, 4D",
         "b": "1B, 2D, 3C, 4A",
         "c": "1C, 2D, 3B, 4A",
         "d": "1D, 2C, 3A, 4B"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 40,
@@ -607,7 +686,9 @@
         "c": "Test sonuçlarını analiz ederken eleştirel düşünme ihtiyacını ortadan kaldırır.",
         "d": "Program kodunun analizinden test senaryoları oluşturur."
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     }
   ]
 }

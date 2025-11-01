@@ -19,7 +19,9 @@
         "c": "Test nesnesinin risk seviyesini azaltmak ve kalite seviyesine olan güveni artırmak",
         "d": "Test edilmemiş girdi kombinasyonlarının kalmadığını doğrulamak"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 2,
@@ -34,7 +36,9 @@
         "c": "Test uzmanlarının son kullanıcılarla iş birliği yapması, bileşen entegrasyonu ve sistem testleri sırasında hata raporlarının kalitesini artırmaya yardımcı olur.",
         "d": "Sertifikalı test uzmanları, sertifikasız test uzmanlarından çok daha iyi test senaryoları tasarlayacaktır."
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 3,
@@ -49,7 +53,9 @@
         "c": "Hatalar yazılımın belli alanlarında yoğunlaşır",
         "d": "Yazılımı %100 test etmek imkansızdır"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 4,
@@ -64,7 +70,9 @@
         "c": "Ödenmesi gereken minimum tutarın doğru şekilde işlenmesini kontrol edecek test senaryoları için sınır değer analizini (BVA) kullanarak test verisi oluşturmak",
         "d": "Kredi kartıyla ödeme sürecini kontrol eden bir test senaryosunu koşturduktan sonra gerçekleşen sonuç ile beklenen sonuç arasındaki uyumsuzluğu analiz etmek ve bir hata raporu oluşturmak"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 5,
@@ -72,7 +80,7 @@
       "score": 1,
       "lo": "FL-1.4.2",
       "kLevel": "K2",
-      "text": "Aşağıdaki faktörlerden hangileri (i-v) test süreci üzerinde ÖNEMLİ bir etkiye sahiptir?",
+      "text": "Aşağıdaki faktörlerden hangileri (i-v) test süreci üzerinde ÖNEMLİ bir etkiye sahiptir?\ni. YGYD (Yazılım geliştirme yaşam döngüsü)\nii. Daha önceki projelerde tespit edilen hata sayısı\niii. Belirlenen ürün riskleri\niv. Yeni yasal düzenlemelerle resmi beyaz kutu testinin zorunlu kılınması\nv. Test ortamı kurulumu",
       "options": {
         "a": "i, ii",
         "b": "i, iii, iv",
@@ -80,7 +88,9 @@
         "d": "iii, v"
       },
       "note": "i. YGYD (Yazılım geliştirme yaşam döngüsü), ii. Daha önceki projelerde tespit edilen hata sayısı, iii. Belirlenen ürün riskleri, iv. Yeni yasal düzenlemelerle resmi beyaz kutu testinin zorunlu kılınması, v. Test ortamı kurulumu",
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 6,
@@ -88,7 +98,7 @@
       "score": 1,
       "lo": "FL-1.4.5",
       "kLevel": "K2",
-      "text": "Aşağıdaki görevlerden HANGİ İKİSİ esas olarak test uzmanı rolüne aittir?",
+      "text": "Aşağıdaki görevlerden HANGİ İKİSİ ESAS OLARAK bir test uzmanı rolüne aittir?\ne) Test esasını analiz etmek",
       "options": {
         "a": "Test ortamlarını yapılandırmak",
         "b": "Ürün backlog'unu (iş listesi) yönetmek",
@@ -96,7 +106,10 @@
         "d": "Test planını oluşturmak",
         "e": "Test esasını analiz etmek"
       },
-      "answer": ["a", "e"]
+      "answer": [
+        "a",
+        "e"
+      ]
     },
     {
       "id": 7,
@@ -104,7 +117,7 @@
       "score": 1,
       "lo": "FL-1.5.1",
       "kLevel": "K2",
-      "text": "Aşağıdaki becerilerden (i-v) hangileri bir test uzmanı için EN ÖNEMLİ becerilerdir?",
+      "text": "Aşağıdaki becerilerden (i-v) hangileri bir test uzmanı için EN ÖNEMLİ becerilerdir?\ni. Alan (domain) bilgisine sahip olmak\nii. Ürünün vizyonunu belirlemek\niii. İyi bir takım oyuncusu olmak\niv. Ekibin çalışmalarını planlamak ve organize etmek\nv. Eleştirel düşünmek",
       "options": {
         "a": "ii ve iv önemlidir",
         "b": "i, iii ve v önemlidir",
@@ -112,7 +125,9 @@
         "d": "iii ve iv önemlidir"
       },
       "note": "i. Alan (domain) bilgisine sahip olmak, ii. Ürünün vizyonunu belirlemek, iii. İyi bir takım oyuncusu olmak, iv. Ekibin çalışmalarını planlamak ve organize etmek, v. Eleştirel düşünmek",
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 8,
@@ -127,7 +142,9 @@
         "c": "İş birimleri, tüm ekip yaklaşımının bir parçası değildir",
         "d": "Test uzmanları, iş birimlerinin kabul testlerini oluşturmasına yardımcı olur"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 9,
@@ -142,7 +159,9 @@
         "c": "Yalnızca döngüsel ve sıralı YGYD modellerinde",
         "d": "Sıralı, artımlı ve döngüsel YGYD modellerinde"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 10,
@@ -157,7 +176,9 @@
         "c": "ATDD'de, testler yazılımın geliştirilmesini yönlendirmek için kabul kriterlerine göre oluşturulur",
         "d": "ATDD'de, testler yazılımın istenen davranışına dayanır, bu da ekip üyelerinin testleri anlamasını kolaylaştırır"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 11,
@@ -165,14 +186,16 @@
       "score": 1,
       "lo": "FL-2.1.5",
       "kLevel": "K2",
-      "text": "Aşağıdakilerden hangisi “shift-left” yaklaşımının bir örneği DEĞİLDİR?",
+      "text": "Aşağıdakilerden hangisi \"shift-left\" yaklaşımının bir örneği DEĞİLDİR?",
       "options": {
         "a": "Kullanıcı gereksinimlerini paydaşların kabulünden önce gözden geçirmek",
         "b": "İlgili kod yazılmadan önce bir bileşen testi yazmak",
         "c": "Bileşen testi sırasında performans testi koşmak",
         "d": "Yapılandırma yönetim sürecini kurmadan önce bir test betiği (script) yazmak"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 12,
@@ -187,7 +210,9 @@
         "c": "Retrospektif sırasında süreçlerdeki eksiklikler analiz edilebilir ve organizasyonun sürekli süreç iyileştirme için yapacağı iyileştirmeler bulunabilir.",
         "d": "Retrospektifler organizasyonda sürekli iyileştirmeyi sürdürmek için çok önemli olan cesaret ve saygı dahil beş değeri benimser"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 13,
@@ -195,7 +220,7 @@
       "score": 1,
       "lo": "FL-2.2.1",
       "kLevel": "K2",
-      "text": "Aşağıdaki hangi hata türleri (1-4) hangi test seviyeleriyle (A-D) EN ÇOK ilgilidir?",
+      "text": "Aşağıdaki hangi hata türleri (1-4) hangi test seviyeleriyle (A-D) EN ÇOK ilgilidir?\n1. Kullanıcı ihtiyaçlarının karşılanamaması ile ilgili hatalar\n2. Bileşenler arasındaki iletişim hataları\n3. Bir modülün iç çalışma mantığındaki hatalar\n4. Sistemde iş kurallarının doğru uygulanmaması ile ilgili hatalar\nA. Bileşen testi\nB. Bileşen entegrasyon testi\nC. Sistem testi\nD. Kabul testi",
       "options": {
         "a": "1D, 2B, 3A, 4C",
         "b": "1D, 2B, 3C, 4A",
@@ -203,7 +228,9 @@
         "d": "1C, 2B, 3A, 4D"
       },
       "note": "1. Kullanıcı ihtiyaçlarının karşılanamaması ile ilgili hatalar, 2. Bileşenler arasındaki iletişim hataları, 3. Bir modülün iç çalışma mantığındaki hatalar, 4. Sistemde iş kurallarının doğru uygulanmaması ile ilgili hatalar. A. Bileşen testi, B. Bileşen entegrasyon testi, C. Sistem testi, D. Kabul testi",
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 14,
@@ -211,14 +238,16 @@
       "score": 1,
       "lo": "FL-2.2.3",
       "kLevel": "K2",
-      "text": "Üç kabul kriterine sahip olan (AC1, AC2 ve AC3) bir kullanıcı hikayesini test ettiğinizi varsayın.\n\nAC1 - TC1 test senaryosu ile, AC2 - TC2 senaryosu ile ve AC3 - TC3 senaryosu ile karşılanmaktadır. Test koşum geçmişi, yazılımın üç ardışık sürümünde aşağıdaki gibi üç test koşumunu içermektedir:\n\n┌──────┬────────────┬────────────┬────────────┐\n│      │ Koşum 1    │ Koşum 2    │ Koşum 3    │\n├──────┼────────────┼────────────┼────────────┤\n│ TC1  │ (1) Başarısız │ (4) Başarılı │ (7) Başarılı │\n│ TC2  │ (2) Başarılı │ (5) Başarısız │ (8) Başarılı │\n│ TC3  │ (3) Başarısız │ (6) Başarısız │ (9) Başarılı │\n└──────┴────────────┴────────────┴────────────┘\n\nBulunan tüm hatalar düzeltildiğinde ve yazılımın yeni bir sürümü geldiğinde testler tekrarlanır.\n\nYukarıdaki testlerden hangileri regresyon testi olarak koşturulmuştur? (1 puan – 1 seçenek seçin)",
+      "text": "Üç kabul kriterine sahip olan (AC1, AC2 ve AC3) bir kullanıcı hikayesini test ettiğinizi varsayın. AC1 - TC1 test senaryosu ile, AC2 - TC2 senaryosu ile ve AC3 - TC3 senaryosu ile karşılanmaktadır. Test koşum geçmişi, yazılımın üç ardışık sürümünde aşağıdaki gibi üç test koşumunu içermektedir:\nKoşum 1: TC1 (1) Başarısız, TC2 (2) Başarılı, TC3 (3) Başarısız\nKoşum 2: TC1 (4) Başarılı, TC2 (5) Başarısız, TC3 (6) Başarısız\nKoşum 3: TC1 (7) Başarılı, TC2 (8) Başarılı, TC3 (9) Başarılı\nBulunan tüm hatalar düzeltildiğinde ve yazılımın yeni bir sürümü geldiğinde testler tekrarlanır. Yukarıdaki testlerden hangileri regresyon testi olarak koşturulmuştur?",
       "options": {
         "a": "Sadece 4, 7, 8, 9",
         "b": "Sadece 5, 7",
         "c": "Sadece 4, 6, 8, 9",
         "d": "Sadece 5, 6"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 15,
@@ -233,7 +262,9 @@
         "c": "Dinamik testte bulunamayacak kodlama hatalarını bulmak",
         "d": "Gereksinimlerdeki eksiklik ve tutarsızlıkları tespit eder"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 16,
@@ -248,7 +279,9 @@
         "c": "Değişikliklerin kalitesini ölçmenin tek yoludur",
         "d": "Gereksinimlerde yanlış anlaşılmaları önlemeye yardımcı olur"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 17,
@@ -256,14 +289,16 @@
       "score": 1,
       "lo": "FL-3.2.4",
       "kLevel": "K2",
-      "text": "Şirketinizde kullanılan gözden geçirmelerin aşağıdaki özelliklere sahip olduğunu varsayın: • Bir katip (scribe) rolü vardır • Asıl amaç kaliteyi değerlendirmektir • Gözden geçirme toplantıları, çalışma ürününün yazarı tarafından yönetilir • Bireysel hazırlık vardır • Bir inceleme raporu hazırlanır. Buna göre, aşağıdaki gözden geçirme türlerinden hangisi EN ÇOK kullanılıyordur?",
+      "text": "Şirketinizde kullanılan gözden geçirmelerin aşağıdaki özelliklere sahip olduğunu varsayın:\n• Bir katip (scribe) rolü vardır\n• Asıl amaç kaliteyi değerlendirmektir\n• Gözden geçirme toplantıları, çalışma ürününün yazarı tarafından yönetilir\n• Bireysel hazırlık vardır\n• Bir inceleme raporu hazırlanır\nBuna göre, aşağıdaki gözden geçirme türlerinden hangisi EN ÇOK kullanılıyordur?",
       "options": {
         "a": "Gayri resmi gözden geçirme (Informal review)",
         "b": "Üzerinden geçme (Walkthrough)",
         "c": "Teknik gözden geçirme (Technical review)",
         "d": "Teftiş (Inspection)"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 18,
@@ -278,7 +313,9 @@
         "c": "Katılımcılar negatif tutumlardan kaçınmalıdır",
         "d": "Bulunan hatalar koşulsuz kabul edilmeli ve nesnel ele alınmalıdır"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 19,
@@ -293,7 +330,9 @@
         "c": "Bu tür teknikler büyük ölçüde test uzmanının yazılım ve alan bilgisine dayanır",
         "d": "Test senaryoları gereksinimlerden sapmaları belirlemek için kullanılır"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 20,
@@ -301,9 +340,16 @@
       "score": 1,
       "lo": "FL-4.2.1",
       "kLevel": "K3",
-      "text": "Basit bir emlak arama formunu test ettiğinizi varsayın. Formda yalnızca iki arama kriteri var: • kat (üç olası seçenek: zemin kat; birinci kat; ikinci kat+) • bahçe tipi (üç olası seçenek: bahçesiz; küçük bahçe; büyük bahçe) Sadece zemin kattaki dairelerin bahçesi vardır. Formda, bu kuralı ihlal eden arama kriterlerini kullanmanıza izin vermeyecek bir doğrulama mekanizması bulunmaktadır. Her testin iki giriş değeri vardır: kat ve bahçe tipi. Testlerinizde her katı ve her bahçe tipini kapsayacak şekilde denklik paylarına ayırma tekniğini (EP) uygulamak istiyorsunuz. %100 EP kapsamına ulaşmak için gereken minimum test senaryosu sayısı nedir?",
-      "options": { "a": "3", "b": "4", "c": "5", "d": "6" },
-      "answer": ["b"]
+      "text": "Basit bir emlak arama formunu test ettiğinizi varsayın. Formda yalnızca iki arama kriteri var:\n• kat (üç olası seçenek: zemin kat; birinci kat; ikinci kat+)\n• bahçe tipi (üç olası seçenek: bahçesiz; küçük bahçe; büyük bahçe)\nSadece zemin kattaki dairelerin bahçesi vardır. Formda, bu kuralı ihlal eden arama kriterlerini kullanmanıza izin vermeyecek bir doğrulama mekanizması bulunmaktadır. Her testin iki giriş değeri vardır: kat ve bahçe tipi. Testlerinizde her katı ve her bahçe tipini kapsayacak şekilde denklik paylarına ayırma tekniğini (EP) uygulamak istiyorsunuz. %100 EP kapsamına ulaşmak için gereken minimum test senaryosu sayısı nedir?",
+      "options": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 21,
@@ -311,9 +357,16 @@
       "score": 1,
       "lo": "FL-4.2.2",
       "kLevel": "K3",
-      "text": "Bir öğrencinin final ders notunu hesaplayan bir sistemi test ettiğinizi varsayın.\n\nFinal notu, aşağıdaki kurallara göre verilmektedir:\n\n• 0 – 50 puan: başarısız\n• 51 – 60 puan: geçer\n• 61 – 70 puan: orta\n• 71 – 80 puan: iyi\n• 81 – 90 puan: çok iyi\n• 91 – 100 puan: mükemmel\n\nAşağıdaki test senaryoları setini hazırladığınızı varsayın:\n\n┌─────┬───────┬─────────────┐\n│     │ SONUÇ │ FİNAL NOTU  │\n├─────┼───────┼─────────────┤\n│ TC1 │  91   │ mükemmel    │\n│ TC2 │  50   │ başarısız   │\n│ TC3 │  81   │ çok iyi     │\n│ TC4 │  60   │ geçer       │\n│ TC5 │  70   │ orta        │\n│ TC6 │  80   │ iyi         │\n└─────┴───────┴─────────────┘\n\nBu test senaryolarına göre elde edilen 2-değerli Sınır Değer Analizi (BVA) kapsamı nedir? (1 puan – 1 seçenek seçin)",
-      "options": { "a": "%50", "b": "%60", "c": "%33.3", "d": "%100" },
-      "answer": ["a"]
+      "text": "Bir öğrencinin final ders notunu hesaplayan bir sistemi test ettiğinizi varsayın. Final notu, aşağıdaki kurallara göre verilmektedir:\n• 0 – 50 puan: başarısız\n• 51 – 60 puan: geçer\n• 61 – 70 puan: orta\n• 71 – 80 puan: iyi\n• 81 – 90 puan: çok iyi\n• 91 – 100 puan: mükemmel\nAşağıdaki test senaryoları setini hazırladığınızı varsayın:\nTC1: 91 → mükemmel\nTC2: 50 → başarısız\nTC3: 81 → çok iyi\nTC4: 60 → geçer\nTC5: 70 → orta\nTC6: 80 → iyi\nBu test senaryolarına göre elde edilen 2-değerli Sınır Değer Analizi (BVA) kapsamı nedir?",
+      "options": {
+        "a": "%50",
+        "b": "%60",
+        "c": "%33.3",
+        "d": "%100"
+      },
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 22,
@@ -321,9 +374,16 @@
       "score": 1,
       "lo": "FL-4.2.3",
       "kLevel": "K3",
-      "text": "En sevdiğiniz günlük bisiklet kiralama mağazası yeni bir Müşteri İlişkileri Yönetimi (CRM) sistemini tanıttı ve en sadık üyelerinden biri olan sizden bunu test etmenizi istedi.\n\nSistemin özellikleri şu şekildedir:\n\n• Herkes bisiklet kiralayabilir, sadece üyeler %20 indirim alır\n• Fakat, iade süresi kaçırılırsa indirim artık geçerli olmaz\n• 15 kiralamada üyelere bir hediye verilir: 1 adet Tişört\n\nSistem özelliklerini açıklayan karar tablosu şu şekildedir:\n\n┌───────────────────────────┬────┬────┬────┬────┬────┬────┬────┬────┐\n│ Koşullar                  │ R1 │ R2 │ R3 │ R4 │ R5 │ R6 │ R7 │ R8 │\n├───────────────────────────┼────┼────┼────┼────┼────┼────┼────┼────┤\n│ Üye mi?                   │ T  │ T  │ T  │ T  │ F  │ F  │ F  │ F  │\n│ İade süresini kaçırdı mı? │ F  │ T  │ F  │ T  │ F  │ T  │ F  │ T  │\n│ 15. kiralama mı?          │ F  │ F  │ T  │ T  │ F  │ F  │ T  │ T  │\n├───────────────────────────┼────┼────┼────┼────┼────┼────┼────┼────┤\n│ Aksiyonlar                │    │    │    │    │    │    │    │    │\n├───────────────────────────┼────┼────┼────┼────┼────┼────┼────┼────┤\n│ %20 indirim               │ X  │    │ X  │    │    │    │    │    │\n│ Hediye Tişört             │    │    │ X  │    │ X  │    │    │    │\n└───────────────────────────┴────┴────┴────┴────┴────┴────┴────┴────┘\n\nYukarıda listelenen koşullardan hangisi imkansız bir durumu tanımlar? (1 puan – 1 seçenek seçin)",
-      "options": { "a": "R4", "b": "R2", "c": "R6", "d": "R8" },
-      "answer": ["d"]
+      "text": "En sevdiğiniz günlük bisiklet kiralama mağazası yeni bir Müşteri İlişkileri Yönetimi (CRM) sistemini tanıttı ve en sadık üyelerinden biri olan sizden bunu test etmenizi istedi. Sistemin özellikleri şu şekildedir:\n• Herkes bisiklet kiralayabilir, sadece üyeler %20 indirim alır\n• Fakat, iade süresi kaçırılırsa indirim artık geçerli olmaz\n• 15 kiralamada üyelere bir hediye verilir: 1 adet Tişört\nSistem özelliklerini açıklayan karar tablosu şu şekildedir:\nKoşullar: R1, R2, R3, R4, R5, R6, R7, R8\nÜye mi? T, T, T, T, F, F, F, F\nİade süresini kaçırdı mı? F, T, F, T, F, T, F, T\n15. kiralama mı? F, F, T, T, F, F, T, T\nAksiyonlar:\n%20 indirim: X, X (R1 ve R3)\nHediye Tişört: X, X, X (R3, R4, R5)\nYukarıda listelenen koşullardan hangisi imkansız bir durumu tanımlar?",
+      "options": {
+        "a": "R4",
+        "b": "R2",
+        "c": "R6",
+        "d": "R8"
+      },
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 23,
@@ -331,9 +391,16 @@
       "score": 1,
       "lo": "FL-4.2.4",
       "kLevel": "K3",
-      "text": "Aşağıda gösterilen durum geçiş diyagramı ile modellenen yaşam döngüsüne sahip bir sistemi test ettiğinizi varsayın. Sistem BAŞLANGIÇ durumunda başlar ve çalışmasını KAPALI durumunda sonlandırır. Geçerli geçiş kapsamı için en az kaç test senaryosu gerekir? (Senaryolar birden fazla geçiş kapsayabilir.)",
-      "options": { "a": "4", "b": "2", "c": "7", "d": "3" },
-      "answer": ["d"],
+      "text": "Aşağıda gösterilen durum geçiş diyagramı ile modellenen yaşam döngüsüne sahip bir sistemi test ettiğinizi varsayın. Sistem BAŞLANGIÇ durumunda başlar ve çalışmasını KAPALI durumunda sonlandırır. Geçerli geçiş kapsamını elde etmek için en az kaç test senaryosuna ihtiyaç vardır? (Test senaryoları birden fazla geçişi kapsayabilir.)",
+      "options": {
+        "a": "4",
+        "b": "2",
+        "c": "7",
+        "d": "3"
+      },
+      "answer": [
+        "d"
+      ],
       "image": "asset://state_diagram_question23.png"
     },
     {
@@ -349,7 +416,9 @@
         "c": "Koddaki her yolun (path) en az bir kez çalıştırıldığı",
         "d": "Girdilerin her kombinasyonunun en az bir kez test edilmiş olduğu"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 25,
@@ -364,7 +433,9 @@
         "c": "Beyaz kutu test teknikleri statik testte kullanılabilir",
         "d": "Beyaz kutu testi, gereksinimlerdeki eksikliklerin belirlenmesine yardımcı olabilir."
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 26,
@@ -379,7 +450,9 @@
         "c": "Hata tahmini, test nesnesinin kullanıcısı olduğunuzu hayal etmenizi ve kullanıcının etkileşim sırasında yapabileceği hataları tahmin etmenizi gerektirir",
         "d": "Hata tahmini, bir geliştiricinin yapabileceği hata türlerini belirlemek için geliştirme görevini hızla tekrarlamanızı gerektirir"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 27,
@@ -394,7 +467,9 @@
         "c": "Keşif testi",
         "d": "Dal testi"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 28,
@@ -409,7 +484,9 @@
         "c": "Kabul kriterlerinin başkaları tarafından yanlış anlaşılma riskini azaltmak için sözlü iletişimi kullanmak",
         "d": "Belirli bir kullanıcı hikayesiyle ilgili riskleri test planında dokümante ederek, risk tabanlı testleri kolaylaştırmak"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     },
     {
       "id": 29,
@@ -417,14 +494,16 @@
       "score": 1,
       "lo": "FL-4.5.3",
       "kLevel": "K3",
-      "text": "Aşağıdaki kullanıcı hikayesini ele alın: \"Bir Editör olarak İçeriği yayınlanmadan önce incelemek istiyorum böylece dil bilgisinin doğru olduğundan emin olabilirim\" Bu kullanıcı hikayesinin kabul kriterleri: • Kullanıcı \"Editör\" rolüyle içerik yönetim sistemine giriş yapabilir • Editör mevcut içerik sayfalarını görüntüleyebilir • Editör sayfa içeriğini düzenleyebilir • Editör yorumlar ekleyebilir • Editör değişiklikleri kaydedebilir • Editör güncelleme yapmak için \"içerik sahibi\" rolüne yeniden atayabilir. Aşağıdakilerden hangisi bu kullanıcı hikayesi için bir ATDD (kabul testi odaklı geliştirme) testinin EN İYİ örneğidir?",
+      "text": "Aşağıdaki kullanıcı hikayesini ele alın:\n\"Bir Editör olarak İçeriği yayınlanmadan önce incelemek istiyorum böylece dil bilgisinin doğru olduğundan emin olabilirim\"\nBu kullanıcı hikayesinin kabul kriterleri:\n• Kullanıcı \"Editör\" rolüyle içerik yönetim sistemine giriş yapabilir\n• Editör mevcut içerik sayfalarını görüntüleyebilir\n• Editör sayfa içeriğini düzenleyebilir\n• Editör yorumlar ekleyebilir\n• Editör değişiklikleri kaydedebilir\n• Editör güncelleme yapmak için \"içerik sahibi\" rolüne yeniden atayabilir\nAşağıdakilerden hangisi bu kullanıcı hikayesi için bir ATDD (kabul testi odaklı geliştirme) testinin EN İYİ örneğidir?",
       "options": {
         "a": "Editörün sayfa içeriğini düzenledikten sonra belgeyi kaydedip kaydedemeyeceğinin test edilmesi",
         "b": "İçerik sahibinin giriş yapıp içerikte güncelleme yapıp yapamayacağının test edilmesi",
         "c": "Editörün düzenlenen içeriği yayınlanmak üzere planlamaya alıp alamayacağının test edilmesi",
         "d": "Editörün güncelleme yapmak için başka bir editöre yeniden atama yapıp yapamayacağının test edilmesi"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 30,
@@ -439,7 +518,9 @@
         "c": "Test uzmanları kullanıcı hikayelerinin ayrıntılı risk tanımlamasına ve risk değerlendirmesine katılır",
         "d": "Test uzmanları sürüm planlaması sırasında erken test tasarımı yaparak yüksek kaliteli yazılımın yayınlanmasını garanti eder"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 31,
@@ -447,7 +528,7 @@
       "score": 1,
       "lo": "FL-5.1.3",
       "kLevel": "K2",
-      "text": "Aşağıdaki seçeneklerden HANGİ İKİSİ bir sistemi test etmek için çıkış kriteri olarak kullanılabilir?",
+      "text": "Aşağıdaki seçeneklerden HANGİ İKİSİ bir sistemi test etmek için çıkış kriteri olarak kullanılabilir?\ne) Regresyon testlerinin otomatize edilmesi",
       "options": {
         "a": "Test ortamının hazır olması",
         "b": "Test uzmanının sisteme login olabilmesi",
@@ -455,7 +536,10 @@
         "d": "Gereksinimlerin given/when/then formatında yazılması",
         "e": "Regresyon testlerinin otomatize edilmesi"
       },
-      "answer": ["c", "e"]
+      "answer": [
+        "c",
+        "e"
+      ]
     },
     {
       "id": 32,
@@ -463,14 +547,16 @@
       "score": 1,
       "lo": "FL-5.1.4",
       "kLevel": "K3",
-      "text": "Ekiptiniz yeni bir yüksek riskli özelliğin test eforunun tahminlemesinde üç-nokta tahmin tekniğini kullanıyor. Buna göre aşağıdaki tahminler yapılmıştır: • En iyimser tahmin: 2 adam-saat • En olası tahmin: 11 adam-saat • En kötümser tahmin: 14 adam-saat Bu veriler baz alınarak elde edilecek efor tahmini ne olmalıdır?",
+      "text": "Ekiptiniz yeni bir yüksek riskli özelliğin test eforunun tahminlemesinde üç-nokta tahmin tekniğini kullanıyor. Buna göre aşağıdaki tahminler yapılmıştır:\n• En iyimser tahmin: 2 adam-saat\n• En olası tahmin: 11 adam-saat\n• En kötümser tahmin: 14 adam-saat\nBu veriler baz alınarak elde edilecek efor tahmini ne olmalıdır?",
       "options": {
         "a": "9 adam-saat",
         "b": "14 adam-saat",
         "c": "11 adam-saat",
         "d": "10 adam-saat"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 33,
@@ -478,14 +564,16 @@
       "score": 1,
       "lo": "FL-5.1.5",
       "kLevel": "K3",
-      "text": "Kullanıcıların yakınlarındaki restoranları bulmalarını sağlayan bir mobil uygulamayı test ettiğinizi varsayın.\n\nAşağıda test senaryolarının, öncelikleri (küçük sayı yüksek öncelik anlamına gelmektedir) ve bağımlılıkları verilmiştir.\n\n┌────────────────┬─────────────────────┬────────────┬────────────┐\n│ Test senaryosu │ Test koşulu         │ Öncelik    │ Bağımlılık │\n├────────────────┼─────────────────────┼────────────┼────────────┤\n│ TS 001         │ Yemek türünü seç    │ 3          │ hiçbiri    │\n│ TS 002         │ Restoran seç        │ 2          │ hiçbiri    │\n│ TS 003         │ Yol tarifi al       │ 1          │ TS 001     │\n│ TS 004         │ Restoranı ara       │ 2          │ TS 002     │\n│ TS 005         │ Rezervasyon yap     │ 3          │ TS 002     │\n└────────────────┴─────────────────────┴────────────┴────────────┘\n\nYukarıdaki tablo göz önünde bulundurularak, aşağıdaki test senaryolarından hangisi ÜÇÜNCÜ sırada koşturulmalıdır? (1 puan – 1 seçenek seçin)",
+      "text": "Kullanıcıların yakınlarındaki restoranları bulmalarını sağlayan bir mobil uygulamayı test ettiğinizi varsayın. Aşağıda test senaryolarının, öncelikleri (küçük sayı yüksek öncelik anlamına gelmektedir) ve bağımlılıkları verilmiştir.\nTest senaryosu: TS 001 - Yemek türünü seç, Öncelik: 3, Bağımlılık: hiçbiri\nTest senaryosu: TS 002 - Restoran seç, Öncelik: 2, Bağımlılık: hiçbiri\nTest senaryosu: TS 003 - Yol tarifi al, Öncelik: 1, Bağımlılık: TS 001\nTest senaryosu: TS 004 - Restoranı ara, Öncelik: 2, Bağımlılık: TS 002\nTest senaryosu: TS 005 - Rezervasyon yap, Öncelik: 3, Bağımlılık: TS 002\nYukarıdaki tablo göz önünde bulundurularak, aşağıdaki test senaryolarından hangisi ÜÇÜNCÜ sırada koşturulmalıdır?",
       "options": {
         "a": "TS 003",
         "b": "TS 005",
         "c": "TS 002",
         "d": "TS 001"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 34,
@@ -493,14 +581,16 @@
       "score": 1,
       "lo": "FL-5.1.7",
       "kLevel": "K2",
-      "text": "Aşağıdaki test kategorilerini (1-4) ve çevik test kadranlarını (A-D) göz önünde bulundurarak: 1. Kullanılabilirlik testi, 2. Bileşen testi, 3. Fonksiyonel test, 4. Güvenilirlik testi. A. Çevik test kadranı Q1: teknoloji odaklı, geliştirme ekibini destekleyen, B. Çevik test kadranı Q2: iş odaklı, geliştirme ekibini destekleyen, C. Çevik test kadranı Q3: iş odaklı, ürünü eleştiren, D. Çevik test kadranı Q4: teknoloji odaklı, ürünü eleştiren. Test kategorileri, çevik test kadranlarıyla nasıl eşlenir?",
+      "text": "Aşağıdaki test kategorilerini (1-4) ve çevik test kadranlarını (A-D) göz önünde bulundurarak:\n1. Kullanılabilirlik testi\n2. Bileşen testi\n3. Fonksiyonel test\n4. Güvenilirlik testi\nA. Çevik test kadranı Q1: teknoloji odaklı, geliştirme ekibini destekleyen\nB. Çevik test kadranı Q2: iş odaklı, geliştirme ekibini destekleyen\nC. Çevik test kadranı Q3: iş odaklı, ürünü eleştiren\nD. Çevik test kadranı Q4: teknoloji odaklı, ürünü eleştiren\nTest kategorileri, çevik test kadranlarıyla nasıl eşlenir?",
       "options": {
         "a": "1C, 2A, 3B, 4D",
         "b": "1D, 2A, 3C, 4B",
         "c": "1C, 2B, 3D, 4A",
         "d": "1D, 2B, 3C, 4A"
       },
-      "answer": ["a"]
+      "answer": [
+        "a"
+      ]
     },
     {
       "id": 35,
@@ -508,14 +598,16 @@
       "score": 1,
       "lo": "FL-5.2.4",
       "kLevel": "K2",
-      "text": "Bir risk analizi sırasında aşağıdaki risk tanımlanmış ve değerlendirilmiştir: • Risk: Rapor oluşturmak için geçen yanıt süresi çok uzun • Risk olasılığı: orta; risk etkisi: yüksek • Riski ele alma yöntemi: o Bağımsız bir test ekibi sistem testi sırasında performans testi gerçekleştirir o Son kullanıcılardan seçilmiş bir örneklem, sürümden önce alfa ve beta kabul testi gerçekleştirir. Bu analiz edilen riske yanıt olarak hangi önlemin alınması öneriliyor?",
+      "text": "Bir risk analizi sırasında aşağıdaki risk tanımlanmış ve değerlendirilmiştir:\n• Risk: Rapor oluşturmak için geçen yanıt süresi çok uzun\n• Risk olasılığı: orta; risk etkisi: yüksek\n• Riski ele alma yöntemi:\n  o Bağımsız bir test ekibi sistem testi sırasında performans testi gerçekleştirir\n  o Son kullanıcılardan seçilmiş bir örneklem, sürümden önce alfa ve beta kabul testi gerçekleştirir\nBu analiz edilen riske yanıt olarak hangi önlemin alınması öneriliyor?",
       "options": {
         "a": "Riskin kabulü",
         "b": "Acil durum planı",
         "c": "Riskin azaltılması",
         "d": "Riskin devredilmesi"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 36,
@@ -530,7 +622,9 @@
         "c": "Test tamamlama raporu",
         "d": "Burndown tablosu"
       },
-      "answer": ["d"]
+      "answer": [
+        "d"
+      ]
     },
     {
       "id": 37,
@@ -545,7 +639,9 @@
         "c": "Yapılandırma yönetimi",
         "d": "Gereksinim mühendisliği"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 38,
@@ -553,14 +649,16 @@
       "score": 1,
       "lo": "FL-5.5.1",
       "kLevel": "K3",
-      "text": "Yazılımcılardan, test raporunda açıklanan anormalliğin tekrarlanabilir olmadığını belirten aşağıdaki hata raporunu aldığınızı varsayın. Uygulama kilitleniyor 2022-May-03 – John Doe – Reddedildi. Yeni kullanıcı oluşturma ekranındaki Ad alanına \"Test girişi: $ä\" girildikten sonra uygulama kilitleniyor. Oturumu kapatmayı ve test_admin01 hesabıyla oturum açmayı denedim, aynı sorun devam etti. Diğer test hesaplarıyla denedim, aynı sorunla yine karşılaştım. Hiçbir hata mesajı alınmadı; sadece loglarda 'fatal error' kaydı gözüküyor (bakınız ek). TS-1305 test senaryosuna göre, uygulamanın sağlanan girişi kabul etmesi ve kullanıcıyı oluşturması gerekiyordu. Lütfen yüksek öncelikli olarak ele alın ve düzeltin, bu özellik kritik bir yeni iş gereksinimi olan REQ-0012 ile ilgilidir. Bu test raporunda yazılımcılar için yararlı olabilecek hangi kritik bilgi EKSİKTİR?",
+      "text": "Yazılımcılardan, test raporunda açıklanan anormalliğin tekrarlanabilir olmadığını belirten aşağıdaki hata raporunu aldığınızı varsayın.\nUygulama kilitleniyor\n2022-May-03 – John Doe – Reddedildi\nYeni kullanıcı oluşturma ekranındaki Ad alanına \"Test girişi: $ä\" girildikten sonra uygulama kilitleniyor. Oturumu kapatmayı ve test_admin01 hesabıyla oturum açmayı denedim, aynı sorun devam etti. Diğer test hesaplarıyla denedim, aynı sorunla yine karşılaştım. Hiçbir hata mesajı alınmadı; sadece loglarda 'fatal error' kaydı gözüküyor (bakınız ek). TS-1305 test senaryosuna göre, uygulamanın sağlanan girişi kabul etmesi ve kullanıcıyı oluşturması gerekiyordu. Lütfen yüksek öncelikli olarak ele alın ve düzeltin, bu özellik kritik bir yeni iş gereksinimi olan REQ-0012 ile ilgilidir.\nBu test raporunda yazılımcılar için yararlı olabilecek hangi kritik bilgi EKSİKTİR?",
       "options": {
         "a": "Beklenen sonuç ve gerçekleşen sonuç",
         "b": "Referanslar ve hata durumu",
         "c": "Test ortamı ve test öğesi",
         "d": "Öncelik ve önem derecesi"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 39,
@@ -575,7 +673,9 @@
         "c": "Testin uyarlanması ve koşulması",
         "d": "Test tamamlama"
       },
-      "answer": ["c"]
+      "answer": [
+        "c"
+      ]
     },
     {
       "id": 40,
@@ -590,7 +690,9 @@
         "c": "Testleri hızlandırabilir",
         "d": "Manuel test için ayrılan süreyi azaltabilir"
       },
-      "answer": ["b"]
+      "answer": [
+        "b"
+      ]
     }
   ]
 }
