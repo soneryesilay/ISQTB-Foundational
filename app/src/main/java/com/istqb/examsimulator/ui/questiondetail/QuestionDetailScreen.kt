@@ -1,5 +1,6 @@
 package com.istqb.examsimulator.ui.questiondetail
 
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -13,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.istqb.examsimulator.data.model.Question
 
@@ -158,7 +160,11 @@ fun QuestionDetailCard(
             
             Text(
                 text = question.text,
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.bodyMedium.copy(
+                    fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+                    lineHeight = 18.sp
+                ),
+                modifier = Modifier.horizontalScroll(rememberScrollState())
             )
 
             // Image if exists
