@@ -1,14 +1,15 @@
 package com.istqb.examsimulator.data.local.entities
 
 import androidx.room.Entity
-import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 import com.istqb.examsimulator.data.local.converters.StringListConverter
 
-@Entity(tableName = "questions")
+@Entity(
+    tableName = "questions",
+    primaryKeys = ["id", "setSource"]
+)
 @TypeConverters(StringListConverter::class)
 data class QuestionEntity(
-    @PrimaryKey
     val id: Int,
     val type: String,
     val text: String,

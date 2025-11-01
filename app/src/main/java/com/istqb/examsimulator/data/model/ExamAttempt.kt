@@ -30,6 +30,7 @@ data class ExamConfig(
 
 data class Answer(
     val questionId: Int,
+    val setSource: String,
     val selectedOptions: List<String>,
     val isFlagged: Boolean = false
 )

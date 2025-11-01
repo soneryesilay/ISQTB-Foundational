@@ -28,17 +28,17 @@ class QuestionRepository(
                 answer = question.answer
             )
 
-            val insertedId = questionDao.insertQuestion(questionEntity)
-            if (insertedId > 0) {
-                val options = question.options.map { (key, text) ->
-                    OptionEntity(
-                        questionId = question.id,
-                        key = key,
-                        text = text
-                    )
-                }
-                questionDao.insertOptions(options)
+            questionDao.insertQuestion(questionEntity)
+            
+            val options = question.options.map { (key, text) ->
+                OptionEntity(
+                    questionId = question.id,
+                    setSource = setSource,
+                    key = key,
+                    text = text
+                )
             }
+            questionDao.insertOptions(options)
         }
     }
 
@@ -57,7 +57,7 @@ class QuestionRepository(
     suspend fun getQuestionsBySets(setSources: List<String>): List<Question> {
         val questionEntities = questionDao.getQuestionsBySets(setSources)
         return questionEntities.map { entity ->
-            val options = questionDao.getOptionsForQuestion(entity.id)
+            val options = questionDao.getOptionsForQuestion(entity.id, entity.setSource)
             Question(
                 id = entity.id,
                 type = entity.type,
@@ -99,7 +99,7 @@ class QuestionRepository(
     fun getQuestionsBySet(setSource: String): Flow<List<Question>> {
         return questionDao.getQuestionsBySet(setSource).map { questionEntities ->
             questionEntities.map { entity ->
-                val options = questionDao.getOptionsForQuestion(entity.id)
+                val options = questionDao.getOptionsForQuestion(entity.id, entity.setSource)
                 Question(
                     id = entity.id,
                     type = entity.type,
@@ -136,10 +136,12 @@ class QuestionRepository(
         questionDao.updateQuestion(questionEntity)
 
         // Delete old options and insert new ones
-        questionDao.deleteOptionsForQuestion(question.id)
+        val setSource = question.setSource ?: ""
+        questionDao.deleteOptionsForQuestion(question.id, setSource)
         val options = question.options.map { (key, text) ->
             OptionEntity(
                 questionId = question.id,
+                setSource = setSource,
                 key = key,
                 text = text
             )

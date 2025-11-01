@@ -10,17 +10,18 @@ import androidx.room.PrimaryKey
     foreignKeys = [
         ForeignKey(
             entity = QuestionEntity::class,
-            parentColumns = ["id"],
-            childColumns = ["questionId"],
+            parentColumns = ["id", "setSource"],
+            childColumns = ["questionId", "setSource"],
             onDelete = ForeignKey.CASCADE
         )
     ],
-    indices = [Index(value = ["questionId"])]
+    indices = [Index(value = ["questionId", "setSource"])]
 )
 data class OptionEntity(
     @PrimaryKey(autoGenerate = true)
     val optionId: Long = 0,
     val questionId: Int,
+    val setSource: String,
     val key: String, // a, b, c, d, e
     val text: String
 )

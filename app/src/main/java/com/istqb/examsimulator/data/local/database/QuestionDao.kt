@@ -14,17 +14,17 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface QuestionDao {
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertQuestion(question: QuestionEntity): Long
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertQuestion(question: QuestionEntity)
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOptions(options: List<OptionEntity>)
 
     @Query("SELECT * FROM questions WHERE setSource IN (:setSources)")
     suspend fun getQuestionsBySets(setSources: List<String>): List<QuestionEntity>
 
-    @Query("SELECT * FROM options WHERE questionId = :questionId ORDER BY key ASC")
-    suspend fun getOptionsForQuestion(questionId: Int): List<OptionEntity>
+    @Query("SELECT * FROM options WHERE questionId = :questionId AND setSource = :setSource ORDER BY key ASC")
+    suspend fun getOptionsForQuestion(questionId: Int, setSource: String): List<OptionEntity>
 
     @Transaction
     @Query("SELECT * FROM questions WHERE id = :questionId")
@@ -48,8 +48,8 @@ interface QuestionDao {
     @Update
     suspend fun updateQuestion(question: QuestionEntity)
 
-    @Query("DELETE FROM options WHERE questionId = :questionId")
-    suspend fun deleteOptionsForQuestion(questionId: Int)
+    @Query("DELETE FROM options WHERE questionId = :questionId AND setSource = :setSource")
+    suspend fun deleteOptionsForQuestion(questionId: Int, setSource: String)
 }
 
 data class QuestionWithOptions(

@@ -34,6 +34,7 @@ class ExamRepository(
             AttemptAnswerEntity(
                 attemptId = attempt.attemptId,
                 questionId = answer.questionId,
+                setSource = answer.setSource,
                 selectedOptions = answer.selectedOptions,
                 isCorrect = false, // Will be calculated during evaluation
                 isFlagged = answer.isFlagged
@@ -86,6 +87,7 @@ class ExamRepository(
         val answers = result.answers.map { entity ->
             Answer(
                 questionId = entity.questionId,
+                setSource = entity.setSource,
                 selectedOptions = entity.selectedOptions,
                 isFlagged = entity.isFlagged
             )

@@ -3,6 +3,8 @@ package com.istqb.examsimulator.ui.questiondetail
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
@@ -235,6 +237,7 @@ fun EditQuestionDialog(
     var optionC by remember { mutableStateOf(question.options["c"] ?: "") }
     var optionD by remember { mutableStateOf(question.options["d"] ?: "") }
     var correctAnswer by remember { mutableStateOf(question.answer.firstOrNull() ?: "a") }
+    val scrollState = rememberScrollState()
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -243,7 +246,8 @@ fun EditQuestionDialog(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .heightIn(max = 500.dp),
+                    .heightIn(max = 500.dp)
+                    .verticalScroll(scrollState),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 OutlinedTextField(

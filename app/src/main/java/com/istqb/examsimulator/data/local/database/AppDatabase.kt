@@ -20,7 +20,7 @@ import com.istqb.examsimulator.data.local.entities.QuestionSetEntity
         ExamAttemptEntity::class,
         AttemptAnswerEntity::class
     ],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 @TypeConverters(StringListConverter::class)

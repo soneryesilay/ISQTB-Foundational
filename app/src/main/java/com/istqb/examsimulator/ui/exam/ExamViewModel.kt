@@ -132,7 +132,7 @@ class ExamViewModel(
     fun selectAnswer(option: String, isSelected: Boolean) {
         val current = _examState.value
         val question = current.questions.getOrNull(current.currentQuestionIndex) ?: return
-        val currentAnswer = current.answers[question.id] ?: Answer(question.id, emptyList())
+        val currentAnswer = current.answers[question.id] ?: Answer(question.id, question.setSource ?: "", emptyList())
 
         val newSelected = if (question.type == "multiple") {
             if (isSelected) {
@@ -219,7 +219,7 @@ class ExamViewModel(
             )
 
             val answersList = current.questions.map { question ->
-                val answer = current.answers[question.id] ?: Answer(question.id, emptyList())
+                val answer = current.answers[question.id] ?: Answer(question.id, question.setSource ?: "", emptyList())
                 answer.copy(isFlagged = current.flaggedQuestions.contains(question.id))
             }
 

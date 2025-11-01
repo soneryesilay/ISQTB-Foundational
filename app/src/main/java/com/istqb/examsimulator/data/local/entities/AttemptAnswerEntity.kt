@@ -18,14 +18,14 @@ import com.istqb.examsimulator.data.local.converters.StringListConverter
         ),
         ForeignKey(
             entity = QuestionEntity::class,
-            parentColumns = ["id"],
-            childColumns = ["questionId"],
+            parentColumns = ["id", "setSource"],
+            childColumns = ["questionId", "setSource"],
             onDelete = ForeignKey.CASCADE
         )
     ],
     indices = [
         Index(value = ["attemptId"]),
-        Index(value = ["questionId"])
+        Index(value = ["questionId", "setSource"])
     ]
 )
 @TypeConverters(StringListConverter::class)
@@ -34,6 +34,7 @@ data class AttemptAnswerEntity(
     val answerId: Long = 0,
     val attemptId: String,
     val questionId: Int,
+    val setSource: String,
     val selectedOptions: List<String>,
     val isCorrect: Boolean,
     val isFlagged: Boolean
