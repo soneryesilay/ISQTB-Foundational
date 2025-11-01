@@ -110,25 +110,37 @@ fun QuestionWithTables(
 ) {
     val parsedContent = TableParser.parseContent(text)
     
+    // Smart formatting for PDF-like structure
+    fun formatForReadability(input: String): String {
+        return input
+            // Add line break after colon followed by uppercase letter or bullet-like pattern
+            .replace(Regex(":\\s+([A-ZŞĞÜÖÇI•○◦▪▫-])"), ":\n$1")
+            // Add line break after question mark or period when followed by uppercase
+            .replace(Regex("([.?])\\s+([A-ZŞĞÜÖÇI])(?![a-zşğüöçı])"), "$1\n$2")
+            // Preserve enumerated lists (a), b), c), etc.) with proper spacing
+            .replace(Regex("\\)\\s+([a-z]\\))"), ")\n$1")
+            .trim()
+    }
+    
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         if (parsedContent.beforeTable.isNotEmpty()) {
-            // No tables, display as normal text
+            // No tables, display as normal text with smart formatting
             Text(
-                text = parsedContent.beforeTable,
+                text = formatForReadability(parsedContent.beforeTable),
                 style = MaterialTheme.typography.bodyMedium,
-                lineHeight = 20.sp
+                lineHeight = 22.sp
             )
         } else {
             // Has tables, display text segments and tables
             parsedContent.textSegments.forEachIndexed { index, textSegment ->
                 if (textSegment.isNotEmpty()) {
                     Text(
-                        text = textSegment,
+                        text = formatForReadability(textSegment),
                         style = MaterialTheme.typography.bodyMedium,
-                        lineHeight = 20.sp
+                        lineHeight = 22.sp
                     )
                 }
                 
