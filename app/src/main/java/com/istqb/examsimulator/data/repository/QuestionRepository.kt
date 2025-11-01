@@ -119,5 +119,33 @@ class QuestionRepository(
     suspend fun deleteQuestion(questionId: String) {
         questionDao.deleteQuestion(questionId)
     }
+
+    suspend fun updateQuestion(question: Question) {
+        // Update question entity
+        val questionEntity = QuestionEntity(
+            id = question.id,
+            type = question.type,
+            text = question.text,
+            lo = question.lo,
+            kLevel = question.kLevel,
+            score = question.score,
+            image = question.image,
+            setSource = question.setSource ?: "",
+            answer = question.answer
+        )
+        questionDao.updateQuestion(questionEntity)
+
+        // Delete old options and insert new ones
+        questionDao.deleteOptionsForQuestion(question.id)
+        val options = question.options.map { (key, text) ->
+            OptionEntity(
+                questionId = question.id,
+                key = key,
+                text = text
+            )
+        }
+        questionDao.insertOptions(options)
+    }
 }
+
 

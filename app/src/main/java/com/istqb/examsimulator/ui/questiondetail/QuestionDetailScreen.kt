@@ -29,6 +29,7 @@ fun QuestionDetailScreen(
     val questions = viewModel.questions.collectAsState().value
     val selectedQuestion = viewModel.selectedQuestion.collectAsState().value
     var showDeleteDialog by remember { mutableStateOf(false) }
+    var showEditDialog by remember { mutableStateOf(false) }
 
     if (questions.isEmpty()) {
         Box(
@@ -51,7 +52,7 @@ fun QuestionDetailScreen(
                 },
                 actions = {
                     if (selectedQuestion != null) {
-                        IconButton(onClick = { /* TODO: Implement edit */ }) {
+                        IconButton(onClick = { showEditDialog = true }) {
                             Icon(Icons.Default.Edit, contentDescription = "Düzenle")
                         }
                         IconButton(onClick = { showDeleteDialog = true }) {
@@ -80,11 +81,12 @@ fun QuestionDetailScreen(
         }
     }
 
+    // Delete confirmation dialog
     if (showDeleteDialog && selectedQuestion != null) {
         AlertDialog(
             onDismissRequest = { showDeleteDialog = false },
             title = { Text("Soruyu Sil") },
-            text = { Text("Bu soruyu silmek istediğinizden emin misiniz?") },
+            text = { Text("Bu soruyu silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.") },
             confirmButton = {
                 TextButton(
                     onClick = {
@@ -99,6 +101,18 @@ fun QuestionDetailScreen(
                 TextButton(onClick = { showDeleteDialog = false }) {
                     Text("İptal")
                 }
+            }
+        )
+    }
+
+    // Edit dialog
+    if (showEditDialog && selectedQuestion != null) {
+        EditQuestionDialog(
+            question = selectedQuestion,
+            onDismiss = { showEditDialog = false },
+            onSave = { updatedQuestion ->
+                viewModel.updateQuestion(updatedQuestion)
+                showEditDialog = false
             }
         )
     }
@@ -207,3 +221,117 @@ fun QuestionDetailCard(
         }
     }
 }
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun EditQuestionDialog(
+    question: Question,
+    onDismiss: () -> Unit,
+    onSave: (Question) -> Unit
+) {
+    var questionText by remember { mutableStateOf(question.text) }
+    var optionA by remember { mutableStateOf(question.options["a"] ?: "") }
+    var optionB by remember { mutableStateOf(question.options["b"] ?: "") }
+    var optionC by remember { mutableStateOf(question.options["c"] ?: "") }
+    var optionD by remember { mutableStateOf(question.options["d"] ?: "") }
+    var correctAnswer by remember { mutableStateOf(question.answer.firstOrNull() ?: "a") }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Soruyu Düzenle") },
+        text = {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .heightIn(max = 500.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                OutlinedTextField(
+                    value = questionText,
+                    onValueChange = { questionText = it },
+                    label = { Text("Soru Metni") },
+                    modifier = Modifier.fillMaxWidth(),
+                    minLines = 3,
+                    maxLines = 5
+                )
+
+                Text(
+                    text = "Şıklar:",
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.Bold
+                )
+
+                OutlinedTextField(
+                    value = optionA,
+                    onValueChange = { optionA = it },
+                    label = { Text("A Şıkkı") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                OutlinedTextField(
+                    value = optionB,
+                    onValueChange = { optionB = it },
+                    label = { Text("B Şıkkı") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                OutlinedTextField(
+                    value = optionC,
+                    onValueChange = { optionC = it },
+                    label = { Text("C Şıkkı") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                OutlinedTextField(
+                    value = optionD,
+                    onValueChange = { optionD = it },
+                    label = { Text("D Şıkkı") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Text(
+                    text = "Doğru Cevap:",
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.Bold
+                )
+
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    listOf("a", "b", "c", "d").forEach { option ->
+                        FilterChip(
+                            selected = correctAnswer == option,
+                            onClick = { correctAnswer = option },
+                            label = { Text(option.uppercase()) }
+                        )
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(
+                onClick = {
+                    val updatedQuestion = question.copy(
+                        text = questionText,
+                        options = mapOf(
+                            "a" to optionA,
+                            "b" to optionB,
+                            "c" to optionC,
+                            "d" to optionD
+                        ),
+                        answer = listOf(correctAnswer)
+                    )
+                    onSave(updatedQuestion)
+                }
+            ) {
+                Text("Kaydet")
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text("İptal")
+            }
+        }
+    )
+}
+

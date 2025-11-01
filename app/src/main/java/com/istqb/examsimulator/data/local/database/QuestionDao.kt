@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Relation
 import androidx.room.Transaction
+import androidx.room.Update
 import com.istqb.examsimulator.data.local.entities.QuestionEntity
 import com.istqb.examsimulator.data.local.entities.OptionEntity
 import kotlinx.coroutines.flow.Flow
@@ -43,6 +44,12 @@ interface QuestionDao {
 
     @Query("DELETE FROM questions WHERE id = :questionId")
     suspend fun deleteQuestion(questionId: String)
+
+    @Update
+    suspend fun updateQuestion(question: QuestionEntity)
+
+    @Query("DELETE FROM options WHERE questionId = :questionId")
+    suspend fun deleteOptionsForQuestion(questionId: Int)
 }
 
 data class QuestionWithOptions(

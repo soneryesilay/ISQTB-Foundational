@@ -20,7 +20,7 @@ import com.istqb.examsimulator.data.local.entities.QuestionSetEntity
         ExamAttemptEntity::class,
         AttemptAnswerEntity::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(StringListConverter::class)
@@ -39,7 +39,9 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "istqb_exam_database"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration() // Versiyonu değiştirdiğimizde veritabanını sil ve yeniden oluştur
+                    .build()
                 INSTANCE = instance
                 instance
             }

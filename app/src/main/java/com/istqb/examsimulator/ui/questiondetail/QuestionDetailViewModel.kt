@@ -40,4 +40,12 @@ class QuestionDetailViewModel(
             _selectedQuestion.value = null
         }
     }
+
+    fun updateQuestion(question: Question) {
+        viewModelScope.launch {
+            questionRepository.updateQuestion(question)
+            // Refresh the selected question
+            _selectedQuestion.value = question
+        }
+    }
 }
